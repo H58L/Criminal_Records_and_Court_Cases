@@ -1,0 +1,92 @@
+CREATING COURTS TABLE
+
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.0.32 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use Criminal_Records_and_Court_Cases;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS Courts (
+    ->     `High_Court` VARCHAR(66) CHARACTER SET utf8,
+    ->     `City` VARCHAR(18) CHARACTER SET utf8,
+    ->     `State` VARCHAR(18) CHARACTER SET utf8
+    -> );
+Query OK, 0 rows affected, 3 warnings (0.02 sec)
+
+mysql> INSERT INTO Courts VALUES ('Allahabad High Court','Allahabad',' Uttar Pradesh'),
+    -> ('Andhra Pradesh High Court','Amaravati',' Andhra Pradesh'),
+    -> ('Bombay High Court','Mumbai',' Maharashtra'),
+    -> ('Calcutta High Court','Kolkata',' West Bengal'),
+    -> ('Chhattisgarh High Court','Bilaspur',' Chhattisgarh'),
+    -> ('Delhi High Court','New Delhi',' Delhi'),
+    -> ('Gujarat High Court','Ahmedabad',' Gujarat'),
+    -> ('Himachal Pradesh High Court','Shimla',' Himachal Pradesh'),
+    -> ('Jammu and Kashmir High Court','Srinagar and Jammu',' Jammu and Kashmir'),
+    -> ('Jharkhand High Court','Ranchi',' Jharkhand'),
+    -> ('Karnataka High Court','Bengaluru',' Karnataka'),
+    -> ('Kerala High Court','Kochi',' Kerala'),
+    -> ('Madhya Pradesh High Court','Jabalpur',' Madhya Pradesh'),
+    -> ('Madras High Court','Chennai',' Tamil Nadu'),
+    -> ('Manipur High Court','Imphal',' Manipur'),
+    -> ('Meghalaya High Court','Shillong',' Meghalaya'),
+    -> ('Orissa High Court','Cuttack',' Odisha'),
+    -> ('Patna High Court','Patna',' Bihar'),
+    -> ('Punjab and Haryana High Court','Chandigarh',NULL),
+    -> ('Rajasthan High Court','Jodhpur',' Rajasthan'),
+    -> ('Sikkim High Court','Gangtok',' Sikkim'),
+    -> ('Telangana High Court','Hyderabad',' Telangana'),
+    -> ('Tripura High Court','Agartala',' Tripura'),
+    -> ('Uttarakhand High Court','Nainital',' Uttarakhand'),
+    -> ('High Court for the Union Territory of Jammu and Kashmir and Ladakh','Jammu',' Jammu and Kashmir');
+Query OK, 25 rows affected (0.01 sec)
+Records: 25  Duplicates: 0  Warnings: 0
+
+mysql> insert into Courts values("Supreme Court","New Delhi","Delhi");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Courts;
++--------------------------------------------------------------------+--------------------+--------------------+
+| High_Court                                                         | City               | State              |
++--------------------------------------------------------------------+--------------------+--------------------+
+| Allahabad High Court                                               | Allahabad          |  Uttar Pradesh     |
+| Andhra Pradesh High Court                                          | Amaravati          |  Andhra Pradesh    |
+| Bombay High Court                                                  | Mumbai             |  Maharashtra       |
+| Calcutta High Court                                                | Kolkata            |  West Bengal       |
+| Chhattisgarh High Court                                            | Bilaspur           |  Chhattisgarh      |
+| Delhi High Court                                                   | New Delhi          |  Delhi             |
+| Gujarat High Court                                                 | Ahmedabad          |  Gujarat           |
+| Himachal Pradesh High Court                                        | Shimla             |  Himachal Pradesh  |
+| Jammu and Kashmir High Court                                       | Srinagar and Jammu |  Jammu and Kashmir |
+| Jharkhand High Court                                               | Ranchi             |  Jharkhand         |
+| Karnataka High Court                                               | Bengaluru          |  Karnataka         |
+| Kerala High Court                                                  | Kochi              |  Kerala            |
+| Madhya Pradesh High Court                                          | Jabalpur           |  Madhya Pradesh    |
+| Madras High Court                                                  | Chennai            |  Tamil Nadu        |
+| Manipur High Court                                                 | Imphal             |  Manipur           |
+| Meghalaya High Court                                               | Shillong           |  Meghalaya         |
+| Orissa High Court                                                  | Cuttack            |  Odisha            |
+| Patna High Court                                                   | Patna              |  Bihar             |
+| Punjab and Haryana High Court                                      | Chandigarh         | NULL               |
+| Rajasthan High Court                                               | Jodhpur            |  Rajasthan         |
+| Sikkim High Court                                                  | Gangtok            |  Sikkim            |
+| Telangana High Court                                               | Hyderabad          |  Telangana         |
+| Tripura High Court                                                 | Agartala           |  Tripura           |
+| Uttarakhand High Court                                             | Nainital           |  Uttarakhand       |
+| High Court for the Union Territory of Jammu and Kashmir and Ladakh | Jammu              |  Jammu and Kashmir |
+| Supreme Court                                                      | New Delhi          | Delhi              |
++--------------------------------------------------------------------+--------------------+--------------------+
+26 rows in set (0.00 sec)
+
+mysql>
