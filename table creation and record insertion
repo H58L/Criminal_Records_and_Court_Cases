@@ -90,3 +90,478 @@ mysql> select * from Courts;
 26 rows in set (0.00 sec)
 
 mysql>
+
+
+
+mysql> use Criminal_Records_and_Court_Cases
+Database changed
+mysql> CREATE TABLE IF NOT EXISTS Victim (
+    ->     `VictimID` VARCHAR(3) CHARACTER SET utf8,
+    ->     `firstname` VARCHAR(10) CHARACTER SET utf8,
+    ->     `lastname` VARCHAR(14) CHARACTER SET utf8,
+    ->     `PhoneNo` VARCHAR(10) CHARACTER SET utf8,
+    ->     `Gender` VARCHAR(6) CHARACTER SET utf8,
+    ->     `DOB` DATETIME,
+    ->     `GUID` VARCHAR(36) CHARACTER SET utf8,
+    ->     `Column_8` INT,
+    ->     `State` VARCHAR(17) CHARACTER SET utf8,
+    ->     `City` VARCHAR(18) CHARACTER SET utf8,
+    ->     `Pincode` INT
+    -> );
+Query OK, 0 rows affected, 8 warnings (0.08 sec)
+
+mysql> INSERT INTO Victim VALUES ('101','Libbie','Ciro','4006709949','Male','1940-03-29 00:00:00','076aeda4-23e9-40f5-9a54-e1b51397c9d5',NULL,'Delhi','Delhi',NULL),
+    -> ('102','Albertina','Ellord','7607899743','Female','1900-05-01 00:00:00','f1bb68af-fc5b-4304-982e-fc4cf3ce2ec6',NULL,'Mahārāshtra','Mumbai',NULL),
+    -> ('103','Celestyna','Phaidra','4405899889','Female','1946-02-25 00:00:00','cb0cb6d4-410c-4679-805f-2827b0b28d63',NULL,'West Bengal','Kolkāta',NULL),
+    -> ('104','Merry','Doig','4519962645','Other','1966-12-27 00:00:00','415636a2-803b-4a7d-ab25-05afcb934b23',NULL,'Karnātaka','Bangalore',NULL),
+    -> ('105','Rochette','Rozanna','2298023683','Female','1983-02-27 00:00:00','aaee6199-c0e1-4b39-96fe-72f1ed94264b',NULL,'Tamil Nādu','Chennai',NULL),
+    -> ('106','Jobi','Jerald','2352433887','Female','1958-03-24 00:00:00','3c22e1a9-1de2-485a-a52d-0808ced8d17e',NULL,'Telangana','Hyderābād',NULL),
+    -> ('107','Marika','Means','5773972988','Female','1928-09-24 00:00:00','c17f910e-4bdf-456b-902c-f31592265e43',NULL,'Mahārāshtra','Pune',NULL),
+    -> ('108','Elena','Kellby','5872004138','Female','1920-06-07 00:00:00','454999fb-c7e2-4381-9c1e-aa60ada31230',NULL,'Gujarāt','Ahmedabad',NULL),
+    -> ('109','Fina','Beebe','5326086889','Male','1928-11-15 00:00:00','79368b7b-e75d-4fa7-a2ba-7917136ee91d',NULL,'Gujarāt','Sūrat',NULL),
+    -> ('110','Emilia','Zetta','7041683199','Female','1998-05-24 00:00:00','7c1a92f4-6c3d-4d8a-8466-046549c6cecf',NULL,'Uttar Pradesh','Lucknow',NULL),
+    -> ('111','Drucie','Cimbura','8896374710','Other','1970-03-21 00:00:00','d9a5332b-df14-416e-a3ec-0a437cb5e106',NULL,'Rājasthān','Jaipur',NULL),
+    -> ('112','Consuela','Raama','3732441474','Female','1926-12-20 00:00:00','7cea82ee-4e3f-48c4-8c2d-9b92544ed233',NULL,'Uttar Pradesh','Cawnpore',NULL),
+    -> ('113','Iseabal','Zola','2129085955','Female','1904-11-06 00:00:00','7cb58476-147a-42b2-b8b6-3e6a5d1bb02c',NULL,'Uttar Pradesh','Mirzāpur',NULL),
+    -> ('114','Audrie','Lasley','4333147208','Other','1962-07-21 00:00:00','a833aa96-ce4c-4a9f-9848-fe07417bcaca',NULL,'Mahārāshtra','Nāgpur',NULL),
+    -> ('115','Monika','Garlinda','2192211141','Male','1912-01-29 00:00:00','707f5abb-7a75-49bc-9e7b-a88b3f9b140b',NULL,'Uttar Pradesh','Ghāziābād',NULL),
+    -> ('116','Christy','Pandolfi','7002425123','Male','1954-04-30 00:00:00','cb6de214-cbf6-4418-8eae-ae665b6596e0',NULL,'Madhya Pradesh','Indore',NULL),
+    -> ('117','Cassondra','Odysseus','8584952127','Other','1909-03-06 00:00:00','8eeef54c-fe08-4967-84c6-1ef984c02d18',NULL,'Gujarāt','Vadodara',NULL),
+    -> ('118','Ariela','Korey','6922254767','Other','1956-05-10 00:00:00','33034f3b-d59c-479b-81cb-1c5d8de06ab3',NULL,'Andhra Pradesh','Vishākhapatnam',NULL),
+    -> ('119','Karolina','Ammann','6683455712','Other','1913-03-10 00:00:00','f495ece1-4bac-483f-aa13-7a8038db2bef',NULL,'Madhya Pradesh','Bhopāl',NULL),
+    -> ('120','Blinni','Autrey','6163237495','Female','1921-05-03 00:00:00','68be0d99-997d-4d2c-a8a4-b6ebfa6f6cdf',NULL,'Mahārāshtra','Chinchvad',NULL),
+    -> ('121','Elmira','Greenwald','6595975754','Female','1900-11-13 00:00:00','8f431f8d-ac7b-42cf-a7f0-1e7c336c188e',NULL,'Bihār','Patna',NULL),
+    -> ('122','Arlena','Solitta','9481476937','Female','2011-07-29 00:00:00','ec972bc0-3b96-40b5-9d5e-6d0fbe0296f0',NULL,'Punjab','Ludhiāna',NULL),
+    -> ('123','Danika','Lunsford','8850801736','Other','1961-06-11 00:00:00','b3745534-b48a-40d3-ae3e-f5a11a8d5d0f',NULL,'Uttar Pradesh','Āgra',NULL),
+    -> ('124','Tierney','Levey','5906224692','Other','1982-07-18 00:00:00','4161abaf-9d78-48df-b566-57883a8dd7ab',NULL,'Mahārāshtra','Kalyān',NULL),
+    -> ('125','Nataline','Parsaye','6614568063','Female','1968-12-06 00:00:00','495ce5c2-492c-4222-8f92-83cd398ada08',NULL,'Tamil Nādu','Madurai',NULL),
+    -> ('126','Elvira','Dannye','7838787148','Female','1968-10-22 00:00:00','e02c0fc7-5c6a-4a4d-bd85-decc32de2444',NULL,'Jharkhand','Jamshedpur',NULL),
+    -> ('127','Charmaine','Lilybelle','6417349945','Male','1942-05-27 00:00:00','c9af1992-39dd-4aea-b0a5-8f90ae6cee86',NULL,'Mahārāshtra','Nāsik',NULL),
+    -> ('128','Gilda','Torray','6231972508','Male','1958-01-16 00:00:00','8ac0c35d-aae4-4675-b1b3-9d5ccbc64568',NULL,'Haryāna','Farīdābād',NULL),
+    -> ('129','Anthia','Bohlin','2550374290','Male','1962-05-01 00:00:00','204e501d-5314-4f5d-98b2-52a1406c337d',NULL,'Mahārāshtra','Aurangābād',NULL),
+    -> ('130','Molli','Schroth','4296757592','Male','1976-08-31 00:00:00','08a08202-d2c4-4545-b6b5-ae72d137f6dd',NULL,'Gujarāt','Rājkot',NULL),
+    -> ('131','Raquela','Sikorski','4132966328','Male','1949-09-05 00:00:00','c88ad278-d353-4742-b93c-2f7bab2dde61',NULL,'Uttar Pradesh','Meerut',NULL),
+    -> ('132','Alyda','Jalbert','4185531692','Other','1993-01-01 00:00:00','4c33c631-e894-4a6e-b537-f7d51544e4f6',NULL,'Madhya Pradesh','Jabalpur',NULL),
+    -> ('133','Beatriz','Roche','7905789549','Other','1936-02-10 00:00:00','352a5252-14c2-4c15-9091-f8437741c140',NULL,'Mahārāshtra','Thāne',NULL),
+    -> ('134','Brietta','Birdella','5655882869','Male','1961-08-24 00:00:00','65645d7e-7ffd-4700-be4c-067b1c467a0a',NULL,'Jharkhand','Dhanbād',NULL),
+    -> ('135','Codie','Lissi','5974808976','Female','1912-11-20 00:00:00','94b706ad-264e-4af4-be83-5678daba3194',NULL,'Uttar Pradesh','Allahābād',NULL),
+    -> ('136','Oralee','Campball','5861088878','Male','1996-01-18 00:00:00','8bb556fd-a001-436b-a683-ad5ce0832603',NULL,'Uttar Pradesh','Vārānasi',NULL),
+    -> ('137','Bill','Melan','7991773257','Other','2009-04-03 00:00:00','9d382ca1-f7c4-46ea-939c-b259389837a8',NULL,'Jammu and Kashmīr','Srīnagar',NULL),
+    -> ('138','Paola','Jehu','6756546354','Male','1907-07-01 00:00:00','72bfb108-0873-4ed0-84ab-d5b8064399a3',NULL,'Punjab','Amritsar',NULL),
+    -> ('139','Nollie','Joni','8677232928','Female','1925-01-19 00:00:00','6f7f9270-9a79-43b4-b628-60958ac55a88',NULL,'Uttar Pradesh','Alīgarh',NULL),
+    -> ('140','Gisela','Kamaria','2207590760','Female','1915-02-24 00:00:00','ba3f196a-4a63-4878-84c5-2bdaf4df5bc6',NULL,'Mahārāshtra','Bhiwandi',NULL),
+    -> ('141','Maisey','Alice','1861730902','Female','1961-09-27 00:00:00','331c3ced-f09e-49f4-91cd-5406f4470a2b',NULL,'Madhya Pradesh','Gwalior',NULL),
+    -> ('142','Luci','Trinetta','6469353400','Other','1923-01-13 00:00:00','85611a7a-d81c-48d5-9f9d-e8ceb2a97d7a',NULL,'Chhattīsgarh','Bhilai',NULL),
+    -> ('143','Marleah','Glenden','8009915045','Male','1931-08-15 00:00:00','321a730d-6a3a-4631-a546-8cab14c1ca28',NULL,'West Bengal','Hāora',NULL),
+    -> ('144','Sherrie','Fry','8228604496','Female','1960-03-26 00:00:00','1e3376da-da99-4ffe-8f4a-50520c632a0d',NULL,'Jharkhand','Rānchi',NULL),
+    -> ('145','Maryellen','Quent','7628529691','Male','1971-12-21 00:00:00','89c5cfea-c9ed-43ae-aae2-3897f7f345f7',NULL,'Andhra Pradesh','Bezwāda',NULL),
+    -> ('146','Cordi','Wilona','2347439542','Female','1992-01-18 00:00:00','a2e009fe-fe35-4575-8a1a-afd30f4ef63e',NULL,'Chandīgarh','Chandīgarh',NULL),
+    -> ('147','Helsa','Buckler','7572525823','Female','1920-03-25 00:00:00','ec434347-b982-4e94-af17-482837d759de',NULL,'Karnātaka','Mysore',NULL),
+    -> ('148','Karly','Carri','1639382440','Other','1978-10-14 00:00:00','fa08ec8e-d534-49d2-a922-e45309dfee0c',NULL,'Chhattīsgarh','Raipur',NULL),
+    -> ('149','Merci','Wolfgram','9145406788','Male','1961-05-07 00:00:00','ea421bfd-f89a-41d9-833c-524afeebfc1e',NULL,'Rājasthān','Kota',NULL),
+    -> ('150','Jaclyn','Rese','7642061498','Female','1992-04-06 00:00:00','6c32db3f-3a57-4f07-b5a9-d22b24a1b7c6',NULL,'Uttar Pradesh','Bareilly',NULL),
+    -> ('151','Corina','Mintz','8781297739','Male','2020-09-19 00:00:00','b3189abe-7b38-40d0-98c5-58553ccc3cc2',NULL,'Rājasthān','Jodhpur',NULL),
+    -> ('152','Ardys','Orpah','4983671811','Female','1946-04-03 00:00:00','46f180b3-1095-4179-a2aa-02408f344942',NULL,'Tamil Nādu','Coimbatore',NULL),
+    -> ('153','Cassandra','Ciapas','8665908041','Female','1912-01-18 00:00:00','44a952e2-c3e4-4b78-85a5-71467134fc72',NULL,'Assam','Dispur',NULL),
+    -> ('154','Ekaterina','Phaidra','3400247054','Other','1903-12-17 00:00:00','867236fb-bca9-4a67-8c46-b344edaabfd9',NULL,'Assam','Guwāhāti',NULL),
+    -> ('155','Rosanne','Buttaro','9316032298','Male','1918-04-11 00:00:00','236e0305-3184-495e-9814-73531b25f7b3',NULL,'Mahārāshtra','Solāpur',NULL),
+    -> ('156','Adelle','Zrike','1964534019','Male','2006-02-23 00:00:00','f705847f-ba53-4796-8a66-52346684b88b',NULL,'Tamil Nādu','Trichinopoly',NULL),
+    -> ('157','Millie','Malvino','2368255233','Male','1910-12-24 00:00:00','fe97389c-af13-43c5-8ebf-ed8a89148783',NULL,'Karnātaka','Hubli',NULL),
+    -> ('158','Mildrid','Toni','4431195799','Male','1936-02-01 00:00:00','96f5e7c3-37ee-4a49-a1a4-4e7cf63e7f30',NULL,'Punjab','Jalandhar',NULL),
+    -> ('159','Jacquetta','Hubert','3582953738','Other','1960-03-19 00:00:00','2664d9f7-fd16-4145-9fa3-6a3146aa48f6',NULL,'Odisha','Bhubaneshwar',NULL),
+    -> ('160','Fina','Noam','6528777472','Female','1971-05-31 00:00:00','1c17f7a0-e6e3-4a92-a2f4-18d31af92886',NULL,'Mahārāshtra','Bhayandar',NULL),
+    -> ('161','Jennica','Santoro','2687136867','Female','1965-10-15 00:00:00','9f569f2c-3209-48e2-9979-4d62cde03ab1',NULL,'Uttar Pradesh','Morādābād',NULL),
+    -> ('162','Layla','Kenwood','4838317752','Male','2005-11-22 00:00:00','00d22bed-6424-49d9-8a66-2db23e64bdc2',NULL,'Mahārāshtra','Kolhāpur',NULL),
+    -> ('163','Katleen','Erminia','5879978905','Male','1916-12-07 00:00:00','dacad33b-c902-4891-bfc7-ef39242865e1',NULL,'Kerala','Thiruvananthapuram',NULL),
+    -> ('164','Susette','Phyllis','8711531884','Other','1963-06-12 00:00:00','44b109ff-820c-4e17-ad37-9307317a4475',NULL,'Uttar Pradesh','Sahāranpur',NULL),
+    -> ('165','Karina','Rosemary','9943851574','Other','1963-08-31 00:00:00','14bd1373-454b-4885-bfac-7a44e057a9a5',NULL,'Telangana','Warangal',NULL),
+    -> ('166','Kenna','Sawtelle','5102610248','Male','1936-07-11 00:00:00','58aee813-3b81-45ce-9ce7-2304fe886216',NULL,'Tamil Nādu','Salem',NULL),
+    -> ('167','Krystle','Pernick','4791221889','Female','1953-08-22 00:00:00','ee03ac1d-af04-4e6c-9298-3d2d89d1a74f',NULL,'Mahārāshtra','Mālegaon',NULL),
+    -> ('168','Veda','Sothena','5832197058','Male','1998-03-01 00:00:00','28708f3a-a685-438e-857d-d232cfb5b068',NULL,'Kerala','Kochi',NULL),
+    -> ('169','Talya','Gladstone','5072289332','Other','2008-11-23 00:00:00','9268c113-b5b8-4e4f-8366-a4238b6fb460',NULL,'Uttar Pradesh','Gorakhpur',NULL),
+    -> ('170','Lelah','Colleen','2730057544','Female','1944-06-21 00:00:00','76945168-3366-489f-a3bd-dfd25cf92c4a',NULL,'Karnātaka','Shimoga',NULL),
+    -> ('171','Kerrin','Bivins','5379996753','Male','2002-04-09 00:00:00','6b8fc8af-3cb0-4ff8-9a49-4e1886c3e7bf',NULL,'Tamil Nādu','Tiruppūr',NULL),
+    -> ('172','Caryl','Hieronymus','4344588507','Other','1904-07-12 00:00:00','4cf8f1ad-111a-40cd-b556-dd3428c7673d',NULL,'Andhra Pradesh','Guntūr',NULL),
+    -> ('173','Anica','Deegan','3869001052','Female','1930-11-30 00:00:00','bd17c407-94b6-465a-b882-ae3953ad4663',NULL,'Odisha','Raurkela',NULL),
+    -> ('174','Romona','Amasa','3355150875','Male','1912-04-15 00:00:00','99bda896-9143-4944-884a-f57ad768f81b',NULL,'Karnātaka','Mangalore',NULL),
+    -> ('175','Chickie','Damarra','3524142637','Female','2014-07-29 00:00:00','d2a305cb-9fa2-41da-b39a-622589b9577f',NULL,'Mahārāshtra','Nānded',NULL),
+    -> ('176','Riannon','Marcellus','1420273520','Other','1989-07-29 00:00:00','757e9a6e-f212-4b0b-bf3f-785f6c4d7c10',NULL,'Odisha','Cuttack',NULL),
+    -> ('177','Dorothy','Allys','6689289860','Other','1904-09-30 00:00:00','014fca63-261c-44e3-8728-96cc4863fe69',NULL,'Mahārāshtra','Chānda',NULL),
+    -> ('178','Edyth','Roumell','6493542028','Other','2010-09-23 00:00:00','6c25d9f0-9f52-4070-9f08-cd7b9105ec1a',NULL,'Uttarakhand','Dehra Dūn',NULL),
+    -> ('179','Andeee','Natalia','3798366033','Male','1929-08-09 00:00:00','07c2a996-56d1-4c93-81af-988922cf07a4',NULL,'West Bengal','Durgāpur',NULL),
+    -> ('180','Coral','Ietta','4917209762','Other','1938-12-13 00:00:00','bbad3e13-207e-4e8f-8d82-47428dc074b4',NULL,'West Bengal','Āsansol',NULL),
+    -> ('181','Suzette','Bettine','3538473669','Other','1934-06-27 00:00:00','6dc15b45-947c-4db8-bf68-7aecdf5df0fc',NULL,'Gujarāt','Bhāvnagar',NULL),
+    -> ('182','Sheelagh','Brian','7337379927','Other','1919-10-14 00:00:00','3259a640-1d69-4b5c-ad1d-1d259ab7a828',NULL,'Mahārāshtra','Amrāvati',NULL),
+    -> ('183','Sam','Wolfgram','3363112747','Female','1936-03-31 00:00:00','31fbe778-975b-493e-9ace-5431153096d9',NULL,'Andhra Pradesh','Nellore',NULL),
+    -> ('184','Carolina','Esmaria','7390727820','Female','1991-07-06 00:00:00','6a7162ab-9efa-4fc5-b7ee-965182ca3d80',NULL,'Rājasthān','Ajmer',NULL),
+    -> ('185','Juliane','Barrus','5854585564','Other','1954-08-24 00:00:00','997d17bc-f5c7-4a77-ad9d-2590da2eeedf',NULL,'Tamil Nādu','Tinnevelly',NULL),
+    -> ('186','Pierette','Monk','4458765502','Male','1994-03-08 00:00:00','a9245a5b-48e8-49bd-a2c8-28afefadec0b',NULL,'Rājasthān','Bīkaner',NULL),
+    -> ('187','Kary','Cosenza','3442698552','Other','1932-07-28 00:00:00','ed2b43b8-7704-4406-b572-b6acd8ccb68b',NULL,'Tripura','Agartala',NULL),
+    -> ('188','Lita','Kosey','4299273240','Male','2014-02-17 00:00:00','fa4eccdf-15b4-450c-bff8-80d72efa8f8d',NULL,'Madhya Pradesh','Ujjain',NULL),
+    -> ('189','Carmela','Schalles','7902450796','Male','1915-09-12 00:00:00','ecf7b9ed-c5f7-45ec-8bcd-2b99bf7e44fc',NULL,'Uttar Pradesh','Jhānsi',NULL),
+    -> ('190','Merle','Tomasina','4613682677','Female','1916-12-27 00:00:00','59f03d06-fc53-4ce6-81c8-0732632a5fad',NULL,'Mahārāshtra','Ulhāsnagar',NULL),
+    -> ('191','Justinn','Kare','9925543488','Female','1933-10-27 00:00:00','bda081a1-63b9-4cae-931e-a19d2938a2cd',NULL,'Karnātaka','Davangere',NULL),
+    -> ('192','Ellette','Solitta','3049805667','Other','1980-02-08 00:00:00','f8422e3f-cd52-432e-8885-fa907229b4e0',NULL,'Jammu and Kashmīr','Jammu',NULL),
+    -> ('193','Dagmar','Jotham','3456395489','Female','1909-06-18 00:00:00','b15c0b51-206e-45ff-8b61-e1996ad59be3',NULL,'Karnātaka','Belgaum',NULL),
+    -> ('194','Elbertina','Thad','9746520047','Male','1943-07-25 00:00:00','a94fbe26-92ec-427f-a7ab-33978d281b53',NULL,'Karnātaka','Gulbarga',NULL),
+    -> ('195','Halette','Hedve','7309626169','Other','1967-05-19 00:00:00','121bedf4-5375-4193-80d9-6620ea3f430f',NULL,'Gujarāt','Jāmnagar',NULL),
+    -> ('196','Flory','Bendick','3395908377','Female','1922-09-25 00:00:00','e25dfc55-aab6-4c68-9294-b8161a56fb84',NULL,'Mahārāshtra','Dhūlia',NULL),
+    -> ('197','Shandie','Bennie','8818021438','Male','1952-04-26 00:00:00','de35fba2-ca12-4072-9c39-708763fa083f',NULL,'Bihār','Gaya',NULL),
+    -> ('198','Margarette','Chinua','5766694826','Other','2018-10-24 00:00:00','f5784d8c-bf26-4875-ab52-e1534d511382',NULL,'Mahārāshtra','Jalgaon',NULL),
+    -> ('199','Lanae','Doig','7057933833','Other','1976-07-04 00:00:00','8fee3d52-9186-42cb-bc40-a68ffee9151c',NULL,'Andhra Pradesh','Kurnool',NULL),
+    -> ('200','Pearline','Ciro','3439619967','Female','1939-06-08 00:00:00','a7e459ed-a956-4749-a8c6-4ed2c4f68be9',NULL,'Rājasthān','Udaipur',NULL),
+    -> ('c',NULL,'Andhra Pradesh','Kurnool',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    -> ('200','Pearline','Ciro','3439619967','Female','1939-06-08 00:00:00','a7e459ed-a956-4749-a8c6-4ed2c4f68be9',NULL,'Rājasthān','Udaipur',NULL),
+    -> (NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+Query OK, 103 rows affected (0.03 sec)
+Records: 103  Duplicates: 0  Warnings: 0
+
+mysql> select * from Victim;
++----------+------------+----------------+------------+--------+---------------------+--------------------------------------+----------+-------------------+--------------------+---------+
+| VictimID | firstname  | lastname       | PhoneNo    | Gender | DOB                 | GUID                                 | Column_8 | State             | City               | Pincode |
++----------+------------+----------------+------------+--------+---------------------+--------------------------------------+----------+-------------------+--------------------+---------+
+| 101      | Libbie     | Ciro           | 4006709949 | Male   | 1940-03-29 00:00:00 | 076aeda4-23e9-40f5-9a54-e1b51397c9d5 |     NULL | Delhi             | Delhi              |    NULL |
+| 102      | Albertina  | Ellord         | 7607899743 | Female | 1900-05-01 00:00:00 | f1bb68af-fc5b-4304-982e-fc4cf3ce2ec6 |     NULL | Mah?r?shtra       | Mumbai             |    NULL |
+| 103      | Celestyna  | Phaidra        | 4405899889 | Female | 1946-02-25 00:00:00 | cb0cb6d4-410c-4679-805f-2827b0b28d63 |     NULL | West Bengal       | Kolk?ta            |    NULL |
+| 104      | Merry      | Doig           | 4519962645 | Other  | 1966-12-27 00:00:00 | 415636a2-803b-4a7d-ab25-05afcb934b23 |     NULL | Karn?taka         | Bangalore          |    NULL |
+| 105      | Rochette   | Rozanna        | 2298023683 | Female | 1983-02-27 00:00:00 | aaee6199-c0e1-4b39-96fe-72f1ed94264b |     NULL | Tamil N?du        | Chennai            |    NULL |
+| 106      | Jobi       | Jerald         | 2352433887 | Female | 1958-03-24 00:00:00 | 3c22e1a9-1de2-485a-a52d-0808ced8d17e |     NULL | Telangana         | Hyder?b?d          |    NULL |
+| 107      | Marika     | Means          | 5773972988 | Female | 1928-09-24 00:00:00 | c17f910e-4bdf-456b-902c-f31592265e43 |     NULL | Mah?r?shtra       | Pune               |    NULL |
+| 108      | Elena      | Kellby         | 5872004138 | Female | 1920-06-07 00:00:00 | 454999fb-c7e2-4381-9c1e-aa60ada31230 |     NULL | Gujar?t           | Ahmedabad          |    NULL |
+| 109      | Fina       | Beebe          | 5326086889 | Male   | 1928-11-15 00:00:00 | 79368b7b-e75d-4fa7-a2ba-7917136ee91d |     NULL | Gujar?t           | S?rat              |    NULL |
+| 110      | Emilia     | Zetta          | 7041683199 | Female | 1998-05-24 00:00:00 | 7c1a92f4-6c3d-4d8a-8466-046549c6cecf |     NULL | Uttar Pradesh     | Lucknow            |    NULL |
+| 111      | Drucie     | Cimbura        | 8896374710 | Other  | 1970-03-21 00:00:00 | d9a5332b-df14-416e-a3ec-0a437cb5e106 |     NULL | R?jasth?n         | Jaipur             |    NULL |
+| 112      | Consuela   | Raama          | 3732441474 | Female | 1926-12-20 00:00:00 | 7cea82ee-4e3f-48c4-8c2d-9b92544ed233 |     NULL | Uttar Pradesh     | Cawnpore           |    NULL |
+| 113      | Iseabal    | Zola           | 2129085955 | Female | 1904-11-06 00:00:00 | 7cb58476-147a-42b2-b8b6-3e6a5d1bb02c |     NULL | Uttar Pradesh     | Mirz?pur           |    NULL |
+| 114      | Audrie     | Lasley         | 4333147208 | Other  | 1962-07-21 00:00:00 | a833aa96-ce4c-4a9f-9848-fe07417bcaca |     NULL | Mah?r?shtra       | N?gpur             |    NULL |
+| 115      | Monika     | Garlinda       | 2192211141 | Male   | 1912-01-29 00:00:00 | 707f5abb-7a75-49bc-9e7b-a88b3f9b140b |     NULL | Uttar Pradesh     | Gh?zi?b?d          |    NULL |
+| 116      | Christy    | Pandolfi       | 7002425123 | Male   | 1954-04-30 00:00:00 | cb6de214-cbf6-4418-8eae-ae665b6596e0 |     NULL | Madhya Pradesh    | Indore             |    NULL |
+| 117      | Cassondra  | Odysseus       | 8584952127 | Other  | 1909-03-06 00:00:00 | 8eeef54c-fe08-4967-84c6-1ef984c02d18 |     NULL | Gujar?t           | Vadodara           |    NULL |
+| 118      | Ariela     | Korey          | 6922254767 | Other  | 1956-05-10 00:00:00 | 33034f3b-d59c-479b-81cb-1c5d8de06ab3 |     NULL | Andhra Pradesh    | Vish?khapatnam     |    NULL |
+| 119      | Karolina   | Ammann         | 6683455712 | Other  | 1913-03-10 00:00:00 | f495ece1-4bac-483f-aa13-7a8038db2bef |     NULL | Madhya Pradesh    | Bhop?l             |    NULL |
+| 120      | Blinni     | Autrey         | 6163237495 | Female | 1921-05-03 00:00:00 | 68be0d99-997d-4d2c-a8a4-b6ebfa6f6cdf |     NULL | Mah?r?shtra       | Chinchvad          |    NULL |
+| 121      | Elmira     | Greenwald      | 6595975754 | Female | 1900-11-13 00:00:00 | 8f431f8d-ac7b-42cf-a7f0-1e7c336c188e |     NULL | Bih?r             | Patna              |    NULL |
+| 122      | Arlena     | Solitta        | 9481476937 | Female | 2011-07-29 00:00:00 | ec972bc0-3b96-40b5-9d5e-6d0fbe0296f0 |     NULL | Punjab            | Ludhi?na           |    NULL |
+| 123      | Danika     | Lunsford       | 8850801736 | Other  | 1961-06-11 00:00:00 | b3745534-b48a-40d3-ae3e-f5a11a8d5d0f |     NULL | Uttar Pradesh     | ?gra               |    NULL |
+| 124      | Tierney    | Levey          | 5906224692 | Other  | 1982-07-18 00:00:00 | 4161abaf-9d78-48df-b566-57883a8dd7ab |     NULL | Mah?r?shtra       | Kaly?n             |    NULL |
+| 125      | Nataline   | Parsaye        | 6614568063 | Female | 1968-12-06 00:00:00 | 495ce5c2-492c-4222-8f92-83cd398ada08 |     NULL | Tamil N?du        | Madurai            |    NULL |
+| 126      | Elvira     | Dannye         | 7838787148 | Female | 1968-10-22 00:00:00 | e02c0fc7-5c6a-4a4d-bd85-decc32de2444 |     NULL | Jharkhand         | Jamshedpur         |    NULL |
+| 127      | Charmaine  | Lilybelle      | 6417349945 | Male   | 1942-05-27 00:00:00 | c9af1992-39dd-4aea-b0a5-8f90ae6cee86 |     NULL | Mah?r?shtra       | N?sik              |    NULL |
+| 128      | Gilda      | Torray         | 6231972508 | Male   | 1958-01-16 00:00:00 | 8ac0c35d-aae4-4675-b1b3-9d5ccbc64568 |     NULL | Hary?na           | Far?d?b?d          |    NULL |
+| 129      | Anthia     | Bohlin         | 2550374290 | Male   | 1962-05-01 00:00:00 | 204e501d-5314-4f5d-98b2-52a1406c337d |     NULL | Mah?r?shtra       | Aurang?b?d         |    NULL |
+| 130      | Molli      | Schroth        | 4296757592 | Male   | 1976-08-31 00:00:00 | 08a08202-d2c4-4545-b6b5-ae72d137f6dd |     NULL | Gujar?t           | R?jkot             |    NULL |
+| 131      | Raquela    | Sikorski       | 4132966328 | Male   | 1949-09-05 00:00:00 | c88ad278-d353-4742-b93c-2f7bab2dde61 |     NULL | Uttar Pradesh     | Meerut             |    NULL |
+| 132      | Alyda      | Jalbert        | 4185531692 | Other  | 1993-01-01 00:00:00 | 4c33c631-e894-4a6e-b537-f7d51544e4f6 |     NULL | Madhya Pradesh    | Jabalpur           |    NULL |
+| 133      | Beatriz    | Roche          | 7905789549 | Other  | 1936-02-10 00:00:00 | 352a5252-14c2-4c15-9091-f8437741c140 |     NULL | Mah?r?shtra       | Th?ne              |    NULL |
+| 134      | Brietta    | Birdella       | 5655882869 | Male   | 1961-08-24 00:00:00 | 65645d7e-7ffd-4700-be4c-067b1c467a0a |     NULL | Jharkhand         | Dhanb?d            |    NULL |
+| 135      | Codie      | Lissi          | 5974808976 | Female | 1912-11-20 00:00:00 | 94b706ad-264e-4af4-be83-5678daba3194 |     NULL | Uttar Pradesh     | Allah?b?d          |    NULL |
+| 136      | Oralee     | Campball       | 5861088878 | Male   | 1996-01-18 00:00:00 | 8bb556fd-a001-436b-a683-ad5ce0832603 |     NULL | Uttar Pradesh     | V?r?nasi           |    NULL |
+| 137      | Bill       | Melan          | 7991773257 | Other  | 2009-04-03 00:00:00 | 9d382ca1-f7c4-46ea-939c-b259389837a8 |     NULL | Jammu and Kashm?r | Sr?nagar           |    NULL |
+| 138      | Paola      | Jehu           | 6756546354 | Male   | 1907-07-01 00:00:00 | 72bfb108-0873-4ed0-84ab-d5b8064399a3 |     NULL | Punjab            | Amritsar           |    NULL |
+| 139      | Nollie     | Joni           | 8677232928 | Female | 1925-01-19 00:00:00 | 6f7f9270-9a79-43b4-b628-60958ac55a88 |     NULL | Uttar Pradesh     | Al?garh            |    NULL |
+| 140      | Gisela     | Kamaria        | 2207590760 | Female | 1915-02-24 00:00:00 | ba3f196a-4a63-4878-84c5-2bdaf4df5bc6 |     NULL | Mah?r?shtra       | Bhiwandi           |    NULL |
+| 141      | Maisey     | Alice          | 1861730902 | Female | 1961-09-27 00:00:00 | 331c3ced-f09e-49f4-91cd-5406f4470a2b |     NULL | Madhya Pradesh    | Gwalior            |    NULL |
+| 142      | Luci       | Trinetta       | 6469353400 | Other  | 1923-01-13 00:00:00 | 85611a7a-d81c-48d5-9f9d-e8ceb2a97d7a |     NULL | Chhatt?sgarh      | Bhilai             |    NULL |
+| 143      | Marleah    | Glenden        | 8009915045 | Male   | 1931-08-15 00:00:00 | 321a730d-6a3a-4631-a546-8cab14c1ca28 |     NULL | West Bengal       | H?ora              |    NULL |
+| 144      | Sherrie    | Fry            | 8228604496 | Female | 1960-03-26 00:00:00 | 1e3376da-da99-4ffe-8f4a-50520c632a0d |     NULL | Jharkhand         | R?nchi             |    NULL |
+| 145      | Maryellen  | Quent          | 7628529691 | Male   | 1971-12-21 00:00:00 | 89c5cfea-c9ed-43ae-aae2-3897f7f345f7 |     NULL | Andhra Pradesh    | Bezw?da            |    NULL |
+| 146      | Cordi      | Wilona         | 2347439542 | Female | 1992-01-18 00:00:00 | a2e009fe-fe35-4575-8a1a-afd30f4ef63e |     NULL | Chand?garh        | Chand?garh         |    NULL |
+| 147      | Helsa      | Buckler        | 7572525823 | Female | 1920-03-25 00:00:00 | ec434347-b982-4e94-af17-482837d759de |     NULL | Karn?taka         | Mysore             |    NULL |
+| 148      | Karly      | Carri          | 1639382440 | Other  | 1978-10-14 00:00:00 | fa08ec8e-d534-49d2-a922-e45309dfee0c |     NULL | Chhatt?sgarh      | Raipur             |    NULL |
+| 149      | Merci      | Wolfgram       | 9145406788 | Male   | 1961-05-07 00:00:00 | ea421bfd-f89a-41d9-833c-524afeebfc1e |     NULL | R?jasth?n         | Kota               |    NULL |
+| 150      | Jaclyn     | Rese           | 7642061498 | Female | 1992-04-06 00:00:00 | 6c32db3f-3a57-4f07-b5a9-d22b24a1b7c6 |     NULL | Uttar Pradesh     | Bareilly           |    NULL |
+| 151      | Corina     | Mintz          | 8781297739 | Male   | 2020-09-19 00:00:00 | b3189abe-7b38-40d0-98c5-58553ccc3cc2 |     NULL | R?jasth?n         | Jodhpur            |    NULL |
+| 152      | Ardys      | Orpah          | 4983671811 | Female | 1946-04-03 00:00:00 | 46f180b3-1095-4179-a2aa-02408f344942 |     NULL | Tamil N?du        | Coimbatore         |    NULL |
+| 153      | Cassandra  | Ciapas         | 8665908041 | Female | 1912-01-18 00:00:00 | 44a952e2-c3e4-4b78-85a5-71467134fc72 |     NULL | Assam             | Dispur             |    NULL |
+| 154      | Ekaterina  | Phaidra        | 3400247054 | Other  | 1903-12-17 00:00:00 | 867236fb-bca9-4a67-8c46-b344edaabfd9 |     NULL | Assam             | Guw?h?ti           |    NULL |
+| 155      | Rosanne    | Buttaro        | 9316032298 | Male   | 1918-04-11 00:00:00 | 236e0305-3184-495e-9814-73531b25f7b3 |     NULL | Mah?r?shtra       | Sol?pur            |    NULL |
+| 156      | Adelle     | Zrike          | 1964534019 | Male   | 2006-02-23 00:00:00 | f705847f-ba53-4796-8a66-52346684b88b |     NULL | Tamil N?du        | Trichinopoly       |    NULL |
+| 157      | Millie     | Malvino        | 2368255233 | Male   | 1910-12-24 00:00:00 | fe97389c-af13-43c5-8ebf-ed8a89148783 |     NULL | Karn?taka         | Hubli              |    NULL |
+| 158      | Mildrid    | Toni           | 4431195799 | Male   | 1936-02-01 00:00:00 | 96f5e7c3-37ee-4a49-a1a4-4e7cf63e7f30 |     NULL | Punjab            | Jalandhar          |    NULL |
+| 159      | Jacquetta  | Hubert         | 3582953738 | Other  | 1960-03-19 00:00:00 | 2664d9f7-fd16-4145-9fa3-6a3146aa48f6 |     NULL | Odisha            | Bhubaneshwar       |    NULL |
+| 160      | Fina       | Noam           | 6528777472 | Female | 1971-05-31 00:00:00 | 1c17f7a0-e6e3-4a92-a2f4-18d31af92886 |     NULL | Mah?r?shtra       | Bhayandar          |    NULL |
+| 161      | Jennica    | Santoro        | 2687136867 | Female | 1965-10-15 00:00:00 | 9f569f2c-3209-48e2-9979-4d62cde03ab1 |     NULL | Uttar Pradesh     | Mor?d?b?d          |    NULL |
+| 162      | Layla      | Kenwood        | 4838317752 | Male   | 2005-11-22 00:00:00 | 00d22bed-6424-49d9-8a66-2db23e64bdc2 |     NULL | Mah?r?shtra       | Kolh?pur           |    NULL |
+| 163      | Katleen    | Erminia        | 5879978905 | Male   | 1916-12-07 00:00:00 | dacad33b-c902-4891-bfc7-ef39242865e1 |     NULL | Kerala            | Thiruvananthapuram |    NULL |
+| 164      | Susette    | Phyllis        | 8711531884 | Other  | 1963-06-12 00:00:00 | 44b109ff-820c-4e17-ad37-9307317a4475 |     NULL | Uttar Pradesh     | Sah?ranpur         |    NULL |
+| 165      | Karina     | Rosemary       | 9943851574 | Other  | 1963-08-31 00:00:00 | 14bd1373-454b-4885-bfac-7a44e057a9a5 |     NULL | Telangana         | Warangal           |    NULL |
+| 166      | Kenna      | Sawtelle       | 5102610248 | Male   | 1936-07-11 00:00:00 | 58aee813-3b81-45ce-9ce7-2304fe886216 |     NULL | Tamil N?du        | Salem              |    NULL |
+| 167      | Krystle    | Pernick        | 4791221889 | Female | 1953-08-22 00:00:00 | ee03ac1d-af04-4e6c-9298-3d2d89d1a74f |     NULL | Mah?r?shtra       | M?legaon           |    NULL |
+| 168      | Veda       | Sothena        | 5832197058 | Male   | 1998-03-01 00:00:00 | 28708f3a-a685-438e-857d-d232cfb5b068 |     NULL | Kerala            | Kochi              |    NULL |
+| 169      | Talya      | Gladstone      | 5072289332 | Other  | 2008-11-23 00:00:00 | 9268c113-b5b8-4e4f-8366-a4238b6fb460 |     NULL | Uttar Pradesh     | Gorakhpur          |    NULL |
+| 170      | Lelah      | Colleen        | 2730057544 | Female | 1944-06-21 00:00:00 | 76945168-3366-489f-a3bd-dfd25cf92c4a |     NULL | Karn?taka         | Shimoga            |    NULL |
+| 171      | Kerrin     | Bivins         | 5379996753 | Male   | 2002-04-09 00:00:00 | 6b8fc8af-3cb0-4ff8-9a49-4e1886c3e7bf |     NULL | Tamil N?du        | Tirupp?r           |    NULL |
+| 172      | Caryl      | Hieronymus     | 4344588507 | Other  | 1904-07-12 00:00:00 | 4cf8f1ad-111a-40cd-b556-dd3428c7673d |     NULL | Andhra Pradesh    | Gunt?r             |    NULL |
+| 173      | Anica      | Deegan         | 3869001052 | Female | 1930-11-30 00:00:00 | bd17c407-94b6-465a-b882-ae3953ad4663 |     NULL | Odisha            | Raurkela           |    NULL |
+| 174      | Romona     | Amasa          | 3355150875 | Male   | 1912-04-15 00:00:00 | 99bda896-9143-4944-884a-f57ad768f81b |     NULL | Karn?taka         | Mangalore          |    NULL |
+| 175      | Chickie    | Damarra        | 3524142637 | Female | 2014-07-29 00:00:00 | d2a305cb-9fa2-41da-b39a-622589b9577f |     NULL | Mah?r?shtra       | N?nded             |    NULL |
+| 176      | Riannon    | Marcellus      | 1420273520 | Other  | 1989-07-29 00:00:00 | 757e9a6e-f212-4b0b-bf3f-785f6c4d7c10 |     NULL | Odisha            | Cuttack            |    NULL |
+| 177      | Dorothy    | Allys          | 6689289860 | Other  | 1904-09-30 00:00:00 | 014fca63-261c-44e3-8728-96cc4863fe69 |     NULL | Mah?r?shtra       | Ch?nda             |    NULL |
+| 178      | Edyth      | Roumell        | 6493542028 | Other  | 2010-09-23 00:00:00 | 6c25d9f0-9f52-4070-9f08-cd7b9105ec1a |     NULL | Uttarakhand       | Dehra D?n          |    NULL |
+| 179      | Andeee     | Natalia        | 3798366033 | Male   | 1929-08-09 00:00:00 | 07c2a996-56d1-4c93-81af-988922cf07a4 |     NULL | West Bengal       | Durg?pur           |    NULL |
+| 180      | Coral      | Ietta          | 4917209762 | Other  | 1938-12-13 00:00:00 | bbad3e13-207e-4e8f-8d82-47428dc074b4 |     NULL | West Bengal       | ?sansol            |    NULL |
+| 181      | Suzette    | Bettine        | 3538473669 | Other  | 1934-06-27 00:00:00 | 6dc15b45-947c-4db8-bf68-7aecdf5df0fc |     NULL | Gujar?t           | Bh?vnagar          |    NULL |
+| 182      | Sheelagh   | Brian          | 7337379927 | Other  | 1919-10-14 00:00:00 | 3259a640-1d69-4b5c-ad1d-1d259ab7a828 |     NULL | Mah?r?shtra       | Amr?vati           |    NULL |
+| 183      | Sam        | Wolfgram       | 3363112747 | Female | 1936-03-31 00:00:00 | 31fbe778-975b-493e-9ace-5431153096d9 |     NULL | Andhra Pradesh    | Nellore            |    NULL |
+| 184      | Carolina   | Esmaria        | 7390727820 | Female | 1991-07-06 00:00:00 | 6a7162ab-9efa-4fc5-b7ee-965182ca3d80 |     NULL | R?jasth?n         | Ajmer              |    NULL |
+| 185      | Juliane    | Barrus         | 5854585564 | Other  | 1954-08-24 00:00:00 | 997d17bc-f5c7-4a77-ad9d-2590da2eeedf |     NULL | Tamil N?du        | Tinnevelly         |    NULL |
+| 186      | Pierette   | Monk           | 4458765502 | Male   | 1994-03-08 00:00:00 | a9245a5b-48e8-49bd-a2c8-28afefadec0b |     NULL | R?jasth?n         | B?kaner            |    NULL |
+| 187      | Kary       | Cosenza        | 3442698552 | Other  | 1932-07-28 00:00:00 | ed2b43b8-7704-4406-b572-b6acd8ccb68b |     NULL | Tripura           | Agartala           |    NULL |
+| 188      | Lita       | Kosey          | 4299273240 | Male   | 2014-02-17 00:00:00 | fa4eccdf-15b4-450c-bff8-80d72efa8f8d |     NULL | Madhya Pradesh    | Ujjain             |    NULL |
+| 189      | Carmela    | Schalles       | 7902450796 | Male   | 1915-09-12 00:00:00 | ecf7b9ed-c5f7-45ec-8bcd-2b99bf7e44fc |     NULL | Uttar Pradesh     | Jh?nsi             |    NULL |
+| 190      | Merle      | Tomasina       | 4613682677 | Female | 1916-12-27 00:00:00 | 59f03d06-fc53-4ce6-81c8-0732632a5fad |     NULL | Mah?r?shtra       | Ulh?snagar         |    NULL |
+| 191      | Justinn    | Kare           | 9925543488 | Female | 1933-10-27 00:00:00 | bda081a1-63b9-4cae-931e-a19d2938a2cd |     NULL | Karn?taka         | Davangere          |    NULL |
+| 192      | Ellette    | Solitta        | 3049805667 | Other  | 1980-02-08 00:00:00 | f8422e3f-cd52-432e-8885-fa907229b4e0 |     NULL | Jammu and Kashm?r | Jammu              |    NULL |
+| 193      | Dagmar     | Jotham         | 3456395489 | Female | 1909-06-18 00:00:00 | b15c0b51-206e-45ff-8b61-e1996ad59be3 |     NULL | Karn?taka         | Belgaum            |    NULL |
+| 194      | Elbertina  | Thad           | 9746520047 | Male   | 1943-07-25 00:00:00 | a94fbe26-92ec-427f-a7ab-33978d281b53 |     NULL | Karn?taka         | Gulbarga           |    NULL |
+| 195      | Halette    | Hedve          | 7309626169 | Other  | 1967-05-19 00:00:00 | 121bedf4-5375-4193-80d9-6620ea3f430f |     NULL | Gujar?t           | J?mnagar           |    NULL |
+| 196      | Flory      | Bendick        | 3395908377 | Female | 1922-09-25 00:00:00 | e25dfc55-aab6-4c68-9294-b8161a56fb84 |     NULL | Mah?r?shtra       | Dh?lia             |    NULL |
+| 197      | Shandie    | Bennie         | 8818021438 | Male   | 1952-04-26 00:00:00 | de35fba2-ca12-4072-9c39-708763fa083f |     NULL | Bih?r             | Gaya               |    NULL |
+| 198      | Margarette | Chinua         | 5766694826 | Other  | 2018-10-24 00:00:00 | f5784d8c-bf26-4875-ab52-e1534d511382 |     NULL | Mah?r?shtra       | Jalgaon            |    NULL |
+| 199      | Lanae      | Doig           | 7057933833 | Other  | 1976-07-04 00:00:00 | 8fee3d52-9186-42cb-bc40-a68ffee9151c |     NULL | Andhra Pradesh    | Kurnool            |    NULL |
+| 200      | Pearline   | Ciro           | 3439619967 | Female | 1939-06-08 00:00:00 | a7e459ed-a956-4749-a8c6-4ed2c4f68be9 |     NULL | R?jasth?n         | Udaipur            |    NULL |
+| c        | NULL       | Andhra Pradesh | Kurnool    | NULL   | NULL                | NULL                                 |     NULL | NULL              | NULL               |    NULL |
+| 200      | Pearline   | Ciro           | 3439619967 | Female | 1939-06-08 00:00:00 | a7e459ed-a956-4749-a8c6-4ed2c4f68be9 |     NULL | R?jasth?n         | Udaipur            |    NULL |
+| NULL     | NULL       | NULL           | NULL       | NULL   | NULL                | NULL                                 |     NULL | NULL              | NULL               |    NULL |
++----------+------------+----------------+------------+--------+---------------------+--------------------------------------+----------+-------------------+--------------------+---------+
+103 rows in set (0.00 sec)
+
+mysql>
+
+
+mysql> use Criminal_Records_and_Court_Cases
+Database changed
+mysql> CREATE TABLE IF NOT EXISTS Victim (
+    ->     `VictimID` VARCHAR(3) CHARACTER SET utf8,
+    ->     `firstname` VARCHAR(10) CHARACTER SET utf8,
+    ->     `lastname` VARCHAR(14) CHARACTER SET utf8,
+    ->     `PhoneNo` VARCHAR(10) CHARACTER SET utf8,
+    ->     `Gender` VARCHAR(6) CHARACTER SET utf8,
+    ->     `DOB` DATETIME,
+    ->     `GUID` VARCHAR(36) CHARACTER SET utf8,
+    ->     `Column_8` INT,
+    ->     `State` VARCHAR(17) CHARACTER SET utf8,
+    ->     `City` VARCHAR(18) CHARACTER SET utf8,
+    ->     `Pincode` INT
+    -> );
+Query OK, 0 rows affected, 8 warnings (0.08 sec)
+
+
+CREATION OF VICTIM TABLE:
+mysql> INSERT INTO Victim VALUES ('101','Libbie','Ciro','4006709949','Male','1940-03-29 00:00:00','076aeda4-23e9-40f5-9a54-e1b51397c9d5',NULL,'Delhi','Delhi',NULL),
+    -> ('102','Albertina','Ellord','7607899743','Female','1900-05-01 00:00:00','f1bb68af-fc5b-4304-982e-fc4cf3ce2ec6',NULL,'Mahārāshtra','Mumbai',NULL),
+    -> ('103','Celestyna','Phaidra','4405899889','Female','1946-02-25 00:00:00','cb0cb6d4-410c-4679-805f-2827b0b28d63',NULL,'West Bengal','Kolkāta',NULL),
+    -> ('104','Merry','Doig','4519962645','Other','1966-12-27 00:00:00','415636a2-803b-4a7d-ab25-05afcb934b23',NULL,'Karnātaka','Bangalore',NULL),
+    -> ('105','Rochette','Rozanna','2298023683','Female','1983-02-27 00:00:00','aaee6199-c0e1-4b39-96fe-72f1ed94264b',NULL,'Tamil Nādu','Chennai',NULL),
+    -> ('106','Jobi','Jerald','2352433887','Female','1958-03-24 00:00:00','3c22e1a9-1de2-485a-a52d-0808ced8d17e',NULL,'Telangana','Hyderābād',NULL),
+    -> ('107','Marika','Means','5773972988','Female','1928-09-24 00:00:00','c17f910e-4bdf-456b-902c-f31592265e43',NULL,'Mahārāshtra','Pune',NULL),
+    -> ('108','Elena','Kellby','5872004138','Female','1920-06-07 00:00:00','454999fb-c7e2-4381-9c1e-aa60ada31230',NULL,'Gujarāt','Ahmedabad',NULL),
+    -> ('109','Fina','Beebe','5326086889','Male','1928-11-15 00:00:00','79368b7b-e75d-4fa7-a2ba-7917136ee91d',NULL,'Gujarāt','Sūrat',NULL),
+    -> ('110','Emilia','Zetta','7041683199','Female','1998-05-24 00:00:00','7c1a92f4-6c3d-4d8a-8466-046549c6cecf',NULL,'Uttar Pradesh','Lucknow',NULL),
+    -> ('111','Drucie','Cimbura','8896374710','Other','1970-03-21 00:00:00','d9a5332b-df14-416e-a3ec-0a437cb5e106',NULL,'Rājasthān','Jaipur',NULL),
+    -> ('112','Consuela','Raama','3732441474','Female','1926-12-20 00:00:00','7cea82ee-4e3f-48c4-8c2d-9b92544ed233',NULL,'Uttar Pradesh','Cawnpore',NULL),
+    -> ('113','Iseabal','Zola','2129085955','Female','1904-11-06 00:00:00','7cb58476-147a-42b2-b8b6-3e6a5d1bb02c',NULL,'Uttar Pradesh','Mirzāpur',NULL),
+    -> ('114','Audrie','Lasley','4333147208','Other','1962-07-21 00:00:00','a833aa96-ce4c-4a9f-9848-fe07417bcaca',NULL,'Mahārāshtra','Nāgpur',NULL),
+    -> ('115','Monika','Garlinda','2192211141','Male','1912-01-29 00:00:00','707f5abb-7a75-49bc-9e7b-a88b3f9b140b',NULL,'Uttar Pradesh','Ghāziābād',NULL),
+    -> ('116','Christy','Pandolfi','7002425123','Male','1954-04-30 00:00:00','cb6de214-cbf6-4418-8eae-ae665b6596e0',NULL,'Madhya Pradesh','Indore',NULL),
+    -> ('117','Cassondra','Odysseus','8584952127','Other','1909-03-06 00:00:00','8eeef54c-fe08-4967-84c6-1ef984c02d18',NULL,'Gujarāt','Vadodara',NULL),
+    -> ('118','Ariela','Korey','6922254767','Other','1956-05-10 00:00:00','33034f3b-d59c-479b-81cb-1c5d8de06ab3',NULL,'Andhra Pradesh','Vishākhapatnam',NULL),
+    -> ('119','Karolina','Ammann','6683455712','Other','1913-03-10 00:00:00','f495ece1-4bac-483f-aa13-7a8038db2bef',NULL,'Madhya Pradesh','Bhopāl',NULL),
+    -> ('120','Blinni','Autrey','6163237495','Female','1921-05-03 00:00:00','68be0d99-997d-4d2c-a8a4-b6ebfa6f6cdf',NULL,'Mahārāshtra','Chinchvad',NULL),
+    -> ('121','Elmira','Greenwald','6595975754','Female','1900-11-13 00:00:00','8f431f8d-ac7b-42cf-a7f0-1e7c336c188e',NULL,'Bihār','Patna',NULL),
+    -> ('122','Arlena','Solitta','9481476937','Female','2011-07-29 00:00:00','ec972bc0-3b96-40b5-9d5e-6d0fbe0296f0',NULL,'Punjab','Ludhiāna',NULL),
+    -> ('123','Danika','Lunsford','8850801736','Other','1961-06-11 00:00:00','b3745534-b48a-40d3-ae3e-f5a11a8d5d0f',NULL,'Uttar Pradesh','Āgra',NULL),
+    -> ('124','Tierney','Levey','5906224692','Other','1982-07-18 00:00:00','4161abaf-9d78-48df-b566-57883a8dd7ab',NULL,'Mahārāshtra','Kalyān',NULL),
+    -> ('125','Nataline','Parsaye','6614568063','Female','1968-12-06 00:00:00','495ce5c2-492c-4222-8f92-83cd398ada08',NULL,'Tamil Nādu','Madurai',NULL),
+    -> ('126','Elvira','Dannye','7838787148','Female','1968-10-22 00:00:00','e02c0fc7-5c6a-4a4d-bd85-decc32de2444',NULL,'Jharkhand','Jamshedpur',NULL),
+    -> ('127','Charmaine','Lilybelle','6417349945','Male','1942-05-27 00:00:00','c9af1992-39dd-4aea-b0a5-8f90ae6cee86',NULL,'Mahārāshtra','Nāsik',NULL),
+    -> ('128','Gilda','Torray','6231972508','Male','1958-01-16 00:00:00','8ac0c35d-aae4-4675-b1b3-9d5ccbc64568',NULL,'Haryāna','Farīdābād',NULL),
+    -> ('129','Anthia','Bohlin','2550374290','Male','1962-05-01 00:00:00','204e501d-5314-4f5d-98b2-52a1406c337d',NULL,'Mahārāshtra','Aurangābād',NULL),
+    -> ('130','Molli','Schroth','4296757592','Male','1976-08-31 00:00:00','08a08202-d2c4-4545-b6b5-ae72d137f6dd',NULL,'Gujarāt','Rājkot',NULL),
+    -> ('131','Raquela','Sikorski','4132966328','Male','1949-09-05 00:00:00','c88ad278-d353-4742-b93c-2f7bab2dde61',NULL,'Uttar Pradesh','Meerut',NULL),
+    -> ('132','Alyda','Jalbert','4185531692','Other','1993-01-01 00:00:00','4c33c631-e894-4a6e-b537-f7d51544e4f6',NULL,'Madhya Pradesh','Jabalpur',NULL),
+    -> ('133','Beatriz','Roche','7905789549','Other','1936-02-10 00:00:00','352a5252-14c2-4c15-9091-f8437741c140',NULL,'Mahārāshtra','Thāne',NULL),
+    -> ('134','Brietta','Birdella','5655882869','Male','1961-08-24 00:00:00','65645d7e-7ffd-4700-be4c-067b1c467a0a',NULL,'Jharkhand','Dhanbād',NULL),
+    -> ('135','Codie','Lissi','5974808976','Female','1912-11-20 00:00:00','94b706ad-264e-4af4-be83-5678daba3194',NULL,'Uttar Pradesh','Allahābād',NULL),
+    -> ('136','Oralee','Campball','5861088878','Male','1996-01-18 00:00:00','8bb556fd-a001-436b-a683-ad5ce0832603',NULL,'Uttar Pradesh','Vārānasi',NULL),
+    -> ('137','Bill','Melan','7991773257','Other','2009-04-03 00:00:00','9d382ca1-f7c4-46ea-939c-b259389837a8',NULL,'Jammu and Kashmīr','Srīnagar',NULL),
+    -> ('138','Paola','Jehu','6756546354','Male','1907-07-01 00:00:00','72bfb108-0873-4ed0-84ab-d5b8064399a3',NULL,'Punjab','Amritsar',NULL),
+    -> ('139','Nollie','Joni','8677232928','Female','1925-01-19 00:00:00','6f7f9270-9a79-43b4-b628-60958ac55a88',NULL,'Uttar Pradesh','Alīgarh',NULL),
+    -> ('140','Gisela','Kamaria','2207590760','Female','1915-02-24 00:00:00','ba3f196a-4a63-4878-84c5-2bdaf4df5bc6',NULL,'Mahārāshtra','Bhiwandi',NULL),
+    -> ('141','Maisey','Alice','1861730902','Female','1961-09-27 00:00:00','331c3ced-f09e-49f4-91cd-5406f4470a2b',NULL,'Madhya Pradesh','Gwalior',NULL),
+    -> ('142','Luci','Trinetta','6469353400','Other','1923-01-13 00:00:00','85611a7a-d81c-48d5-9f9d-e8ceb2a97d7a',NULL,'Chhattīsgarh','Bhilai',NULL),
+    -> ('143','Marleah','Glenden','8009915045','Male','1931-08-15 00:00:00','321a730d-6a3a-4631-a546-8cab14c1ca28',NULL,'West Bengal','Hāora',NULL),
+    -> ('144','Sherrie','Fry','8228604496','Female','1960-03-26 00:00:00','1e3376da-da99-4ffe-8f4a-50520c632a0d',NULL,'Jharkhand','Rānchi',NULL),
+    -> ('145','Maryellen','Quent','7628529691','Male','1971-12-21 00:00:00','89c5cfea-c9ed-43ae-aae2-3897f7f345f7',NULL,'Andhra Pradesh','Bezwāda',NULL),
+    -> ('146','Cordi','Wilona','2347439542','Female','1992-01-18 00:00:00','a2e009fe-fe35-4575-8a1a-afd30f4ef63e',NULL,'Chandīgarh','Chandīgarh',NULL),
+    -> ('147','Helsa','Buckler','7572525823','Female','1920-03-25 00:00:00','ec434347-b982-4e94-af17-482837d759de',NULL,'Karnātaka','Mysore',NULL),
+    -> ('148','Karly','Carri','1639382440','Other','1978-10-14 00:00:00','fa08ec8e-d534-49d2-a922-e45309dfee0c',NULL,'Chhattīsgarh','Raipur',NULL),
+    -> ('149','Merci','Wolfgram','9145406788','Male','1961-05-07 00:00:00','ea421bfd-f89a-41d9-833c-524afeebfc1e',NULL,'Rājasthān','Kota',NULL),
+    -> ('150','Jaclyn','Rese','7642061498','Female','1992-04-06 00:00:00','6c32db3f-3a57-4f07-b5a9-d22b24a1b7c6',NULL,'Uttar Pradesh','Bareilly',NULL),
+    -> ('151','Corina','Mintz','8781297739','Male','2020-09-19 00:00:00','b3189abe-7b38-40d0-98c5-58553ccc3cc2',NULL,'Rājasthān','Jodhpur',NULL),
+    -> ('152','Ardys','Orpah','4983671811','Female','1946-04-03 00:00:00','46f180b3-1095-4179-a2aa-02408f344942',NULL,'Tamil Nādu','Coimbatore',NULL),
+    -> ('153','Cassandra','Ciapas','8665908041','Female','1912-01-18 00:00:00','44a952e2-c3e4-4b78-85a5-71467134fc72',NULL,'Assam','Dispur',NULL),
+    -> ('154','Ekaterina','Phaidra','3400247054','Other','1903-12-17 00:00:00','867236fb-bca9-4a67-8c46-b344edaabfd9',NULL,'Assam','Guwāhāti',NULL),
+    -> ('155','Rosanne','Buttaro','9316032298','Male','1918-04-11 00:00:00','236e0305-3184-495e-9814-73531b25f7b3',NULL,'Mahārāshtra','Solāpur',NULL),
+    -> ('156','Adelle','Zrike','1964534019','Male','2006-02-23 00:00:00','f705847f-ba53-4796-8a66-52346684b88b',NULL,'Tamil Nādu','Trichinopoly',NULL),
+    -> ('157','Millie','Malvino','2368255233','Male','1910-12-24 00:00:00','fe97389c-af13-43c5-8ebf-ed8a89148783',NULL,'Karnātaka','Hubli',NULL),
+    -> ('158','Mildrid','Toni','4431195799','Male','1936-02-01 00:00:00','96f5e7c3-37ee-4a49-a1a4-4e7cf63e7f30',NULL,'Punjab','Jalandhar',NULL),
+    -> ('159','Jacquetta','Hubert','3582953738','Other','1960-03-19 00:00:00','2664d9f7-fd16-4145-9fa3-6a3146aa48f6',NULL,'Odisha','Bhubaneshwar',NULL),
+    -> ('160','Fina','Noam','6528777472','Female','1971-05-31 00:00:00','1c17f7a0-e6e3-4a92-a2f4-18d31af92886',NULL,'Mahārāshtra','Bhayandar',NULL),
+    -> ('161','Jennica','Santoro','2687136867','Female','1965-10-15 00:00:00','9f569f2c-3209-48e2-9979-4d62cde03ab1',NULL,'Uttar Pradesh','Morādābād',NULL),
+    -> ('162','Layla','Kenwood','4838317752','Male','2005-11-22 00:00:00','00d22bed-6424-49d9-8a66-2db23e64bdc2',NULL,'Mahārāshtra','Kolhāpur',NULL),
+    -> ('163','Katleen','Erminia','5879978905','Male','1916-12-07 00:00:00','dacad33b-c902-4891-bfc7-ef39242865e1',NULL,'Kerala','Thiruvananthapuram',NULL),
+    -> ('164','Susette','Phyllis','8711531884','Other','1963-06-12 00:00:00','44b109ff-820c-4e17-ad37-9307317a4475',NULL,'Uttar Pradesh','Sahāranpur',NULL),
+    -> ('165','Karina','Rosemary','9943851574','Other','1963-08-31 00:00:00','14bd1373-454b-4885-bfac-7a44e057a9a5',NULL,'Telangana','Warangal',NULL),
+    -> ('166','Kenna','Sawtelle','5102610248','Male','1936-07-11 00:00:00','58aee813-3b81-45ce-9ce7-2304fe886216',NULL,'Tamil Nādu','Salem',NULL),
+    -> ('167','Krystle','Pernick','4791221889','Female','1953-08-22 00:00:00','ee03ac1d-af04-4e6c-9298-3d2d89d1a74f',NULL,'Mahārāshtra','Mālegaon',NULL),
+    -> ('168','Veda','Sothena','5832197058','Male','1998-03-01 00:00:00','28708f3a-a685-438e-857d-d232cfb5b068',NULL,'Kerala','Kochi',NULL),
+    -> ('169','Talya','Gladstone','5072289332','Other','2008-11-23 00:00:00','9268c113-b5b8-4e4f-8366-a4238b6fb460',NULL,'Uttar Pradesh','Gorakhpur',NULL),
+    -> ('170','Lelah','Colleen','2730057544','Female','1944-06-21 00:00:00','76945168-3366-489f-a3bd-dfd25cf92c4a',NULL,'Karnātaka','Shimoga',NULL),
+    -> ('171','Kerrin','Bivins','5379996753','Male','2002-04-09 00:00:00','6b8fc8af-3cb0-4ff8-9a49-4e1886c3e7bf',NULL,'Tamil Nādu','Tiruppūr',NULL),
+    -> ('172','Caryl','Hieronymus','4344588507','Other','1904-07-12 00:00:00','4cf8f1ad-111a-40cd-b556-dd3428c7673d',NULL,'Andhra Pradesh','Guntūr',NULL),
+    -> ('173','Anica','Deegan','3869001052','Female','1930-11-30 00:00:00','bd17c407-94b6-465a-b882-ae3953ad4663',NULL,'Odisha','Raurkela',NULL),
+    -> ('174','Romona','Amasa','3355150875','Male','1912-04-15 00:00:00','99bda896-9143-4944-884a-f57ad768f81b',NULL,'Karnātaka','Mangalore',NULL),
+    -> ('175','Chickie','Damarra','3524142637','Female','2014-07-29 00:00:00','d2a305cb-9fa2-41da-b39a-622589b9577f',NULL,'Mahārāshtra','Nānded',NULL),
+    -> ('176','Riannon','Marcellus','1420273520','Other','1989-07-29 00:00:00','757e9a6e-f212-4b0b-bf3f-785f6c4d7c10',NULL,'Odisha','Cuttack',NULL),
+    -> ('177','Dorothy','Allys','6689289860','Other','1904-09-30 00:00:00','014fca63-261c-44e3-8728-96cc4863fe69',NULL,'Mahārāshtra','Chānda',NULL),
+    -> ('178','Edyth','Roumell','6493542028','Other','2010-09-23 00:00:00','6c25d9f0-9f52-4070-9f08-cd7b9105ec1a',NULL,'Uttarakhand','Dehra Dūn',NULL),
+    -> ('179','Andeee','Natalia','3798366033','Male','1929-08-09 00:00:00','07c2a996-56d1-4c93-81af-988922cf07a4',NULL,'West Bengal','Durgāpur',NULL),
+    -> ('180','Coral','Ietta','4917209762','Other','1938-12-13 00:00:00','bbad3e13-207e-4e8f-8d82-47428dc074b4',NULL,'West Bengal','Āsansol',NULL),
+    -> ('181','Suzette','Bettine','3538473669','Other','1934-06-27 00:00:00','6dc15b45-947c-4db8-bf68-7aecdf5df0fc',NULL,'Gujarāt','Bhāvnagar',NULL),
+    -> ('182','Sheelagh','Brian','7337379927','Other','1919-10-14 00:00:00','3259a640-1d69-4b5c-ad1d-1d259ab7a828',NULL,'Mahārāshtra','Amrāvati',NULL),
+    -> ('183','Sam','Wolfgram','3363112747','Female','1936-03-31 00:00:00','31fbe778-975b-493e-9ace-5431153096d9',NULL,'Andhra Pradesh','Nellore',NULL),
+    -> ('184','Carolina','Esmaria','7390727820','Female','1991-07-06 00:00:00','6a7162ab-9efa-4fc5-b7ee-965182ca3d80',NULL,'Rājasthān','Ajmer',NULL),
+    -> ('185','Juliane','Barrus','5854585564','Other','1954-08-24 00:00:00','997d17bc-f5c7-4a77-ad9d-2590da2eeedf',NULL,'Tamil Nādu','Tinnevelly',NULL),
+    -> ('186','Pierette','Monk','4458765502','Male','1994-03-08 00:00:00','a9245a5b-48e8-49bd-a2c8-28afefadec0b',NULL,'Rājasthān','Bīkaner',NULL),
+    -> ('187','Kary','Cosenza','3442698552','Other','1932-07-28 00:00:00','ed2b43b8-7704-4406-b572-b6acd8ccb68b',NULL,'Tripura','Agartala',NULL),
+    -> ('188','Lita','Kosey','4299273240','Male','2014-02-17 00:00:00','fa4eccdf-15b4-450c-bff8-80d72efa8f8d',NULL,'Madhya Pradesh','Ujjain',NULL),
+    -> ('189','Carmela','Schalles','7902450796','Male','1915-09-12 00:00:00','ecf7b9ed-c5f7-45ec-8bcd-2b99bf7e44fc',NULL,'Uttar Pradesh','Jhānsi',NULL),
+    -> ('190','Merle','Tomasina','4613682677','Female','1916-12-27 00:00:00','59f03d06-fc53-4ce6-81c8-0732632a5fad',NULL,'Mahārāshtra','Ulhāsnagar',NULL),
+    -> ('191','Justinn','Kare','9925543488','Female','1933-10-27 00:00:00','bda081a1-63b9-4cae-931e-a19d2938a2cd',NULL,'Karnātaka','Davangere',NULL),
+    -> ('192','Ellette','Solitta','3049805667','Other','1980-02-08 00:00:00','f8422e3f-cd52-432e-8885-fa907229b4e0',NULL,'Jammu and Kashmīr','Jammu',NULL),
+    -> ('193','Dagmar','Jotham','3456395489','Female','1909-06-18 00:00:00','b15c0b51-206e-45ff-8b61-e1996ad59be3',NULL,'Karnātaka','Belgaum',NULL),
+    -> ('194','Elbertina','Thad','9746520047','Male','1943-07-25 00:00:00','a94fbe26-92ec-427f-a7ab-33978d281b53',NULL,'Karnātaka','Gulbarga',NULL),
+    -> ('195','Halette','Hedve','7309626169','Other','1967-05-19 00:00:00','121bedf4-5375-4193-80d9-6620ea3f430f',NULL,'Gujarāt','Jāmnagar',NULL),
+    -> ('196','Flory','Bendick','3395908377','Female','1922-09-25 00:00:00','e25dfc55-aab6-4c68-9294-b8161a56fb84',NULL,'Mahārāshtra','Dhūlia',NULL),
+    -> ('197','Shandie','Bennie','8818021438','Male','1952-04-26 00:00:00','de35fba2-ca12-4072-9c39-708763fa083f',NULL,'Bihār','Gaya',NULL),
+    -> ('198','Margarette','Chinua','5766694826','Other','2018-10-24 00:00:00','f5784d8c-bf26-4875-ab52-e1534d511382',NULL,'Mahārāshtra','Jalgaon',NULL),
+    -> ('199','Lanae','Doig','7057933833','Other','1976-07-04 00:00:00','8fee3d52-9186-42cb-bc40-a68ffee9151c',NULL,'Andhra Pradesh','Kurnool',NULL),
+    -> ('200','Pearline','Ciro','3439619967','Female','1939-06-08 00:00:00','a7e459ed-a956-4749-a8c6-4ed2c4f68be9',NULL,'Rājasthān','Udaipur',NULL),
+    -> ('c',NULL,'Andhra Pradesh','Kurnool',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    -> ('200','Pearline','Ciro','3439619967','Female','1939-06-08 00:00:00','a7e459ed-a956-4749-a8c6-4ed2c4f68be9',NULL,'Rājasthān','Udaipur',NULL),
+    -> (NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+Query OK, 103 rows affected (0.03 sec)
+Records: 103  Duplicates: 0  Warnings: 0
+
+mysql> select * from Victim;
++----------+------------+----------------+------------+--------+---------------------+--------------------------------------+----------+-------------------+--------------------+---------+
+| VictimID | firstname  | lastname       | PhoneNo    | Gender | DOB                 | GUID                                 | Column_8 | State             | City               | Pincode |
++----------+------------+----------------+------------+--------+---------------------+--------------------------------------+----------+-------------------+--------------------+---------+
+| 101      | Libbie     | Ciro           | 4006709949 | Male   | 1940-03-29 00:00:00 | 076aeda4-23e9-40f5-9a54-e1b51397c9d5 |     NULL | Delhi             | Delhi              |    NULL |
+| 102      | Albertina  | Ellord         | 7607899743 | Female | 1900-05-01 00:00:00 | f1bb68af-fc5b-4304-982e-fc4cf3ce2ec6 |     NULL | Mah?r?shtra       | Mumbai             |    NULL |
+| 103      | Celestyna  | Phaidra        | 4405899889 | Female | 1946-02-25 00:00:00 | cb0cb6d4-410c-4679-805f-2827b0b28d63 |     NULL | West Bengal       | Kolk?ta            |    NULL |
+| 104      | Merry      | Doig           | 4519962645 | Other  | 1966-12-27 00:00:00 | 415636a2-803b-4a7d-ab25-05afcb934b23 |     NULL | Karn?taka         | Bangalore          |    NULL |
+| 105      | Rochette   | Rozanna        | 2298023683 | Female | 1983-02-27 00:00:00 | aaee6199-c0e1-4b39-96fe-72f1ed94264b |     NULL | Tamil N?du        | Chennai            |    NULL |
+| 106      | Jobi       | Jerald         | 2352433887 | Female | 1958-03-24 00:00:00 | 3c22e1a9-1de2-485a-a52d-0808ced8d17e |     NULL | Telangana         | Hyder?b?d          |    NULL |
+| 107      | Marika     | Means          | 5773972988 | Female | 1928-09-24 00:00:00 | c17f910e-4bdf-456b-902c-f31592265e43 |     NULL | Mah?r?shtra       | Pune               |    NULL |
+| 108      | Elena      | Kellby         | 5872004138 | Female | 1920-06-07 00:00:00 | 454999fb-c7e2-4381-9c1e-aa60ada31230 |     NULL | Gujar?t           | Ahmedabad          |    NULL |
+| 109      | Fina       | Beebe          | 5326086889 | Male   | 1928-11-15 00:00:00 | 79368b7b-e75d-4fa7-a2ba-7917136ee91d |     NULL | Gujar?t           | S?rat              |    NULL |
+| 110      | Emilia     | Zetta          | 7041683199 | Female | 1998-05-24 00:00:00 | 7c1a92f4-6c3d-4d8a-8466-046549c6cecf |     NULL | Uttar Pradesh     | Lucknow            |    NULL |
+| 111      | Drucie     | Cimbura        | 8896374710 | Other  | 1970-03-21 00:00:00 | d9a5332b-df14-416e-a3ec-0a437cb5e106 |     NULL | R?jasth?n         | Jaipur             |    NULL |
+| 112      | Consuela   | Raama          | 3732441474 | Female | 1926-12-20 00:00:00 | 7cea82ee-4e3f-48c4-8c2d-9b92544ed233 |     NULL | Uttar Pradesh     | Cawnpore           |    NULL |
+| 113      | Iseabal    | Zola           | 2129085955 | Female | 1904-11-06 00:00:00 | 7cb58476-147a-42b2-b8b6-3e6a5d1bb02c |     NULL | Uttar Pradesh     | Mirz?pur           |    NULL |
+| 114      | Audrie     | Lasley         | 4333147208 | Other  | 1962-07-21 00:00:00 | a833aa96-ce4c-4a9f-9848-fe07417bcaca |     NULL | Mah?r?shtra       | N?gpur             |    NULL |
+| 115      | Monika     | Garlinda       | 2192211141 | Male   | 1912-01-29 00:00:00 | 707f5abb-7a75-49bc-9e7b-a88b3f9b140b |     NULL | Uttar Pradesh     | Gh?zi?b?d          |    NULL |
+| 116      | Christy    | Pandolfi       | 7002425123 | Male   | 1954-04-30 00:00:00 | cb6de214-cbf6-4418-8eae-ae665b6596e0 |     NULL | Madhya Pradesh    | Indore             |    NULL |
+| 117      | Cassondra  | Odysseus       | 8584952127 | Other  | 1909-03-06 00:00:00 | 8eeef54c-fe08-4967-84c6-1ef984c02d18 |     NULL | Gujar?t           | Vadodara           |    NULL |
+| 118      | Ariela     | Korey          | 6922254767 | Other  | 1956-05-10 00:00:00 | 33034f3b-d59c-479b-81cb-1c5d8de06ab3 |     NULL | Andhra Pradesh    | Vish?khapatnam     |    NULL |
+| 119      | Karolina   | Ammann         | 6683455712 | Other  | 1913-03-10 00:00:00 | f495ece1-4bac-483f-aa13-7a8038db2bef |     NULL | Madhya Pradesh    | Bhop?l             |    NULL |
+| 120      | Blinni     | Autrey         | 6163237495 | Female | 1921-05-03 00:00:00 | 68be0d99-997d-4d2c-a8a4-b6ebfa6f6cdf |     NULL | Mah?r?shtra       | Chinchvad          |    NULL |
+| 121      | Elmira     | Greenwald      | 6595975754 | Female | 1900-11-13 00:00:00 | 8f431f8d-ac7b-42cf-a7f0-1e7c336c188e |     NULL | Bih?r             | Patna              |    NULL |
+| 122      | Arlena     | Solitta        | 9481476937 | Female | 2011-07-29 00:00:00 | ec972bc0-3b96-40b5-9d5e-6d0fbe0296f0 |     NULL | Punjab            | Ludhi?na           |    NULL |
+| 123      | Danika     | Lunsford       | 8850801736 | Other  | 1961-06-11 00:00:00 | b3745534-b48a-40d3-ae3e-f5a11a8d5d0f |     NULL | Uttar Pradesh     | ?gra               |    NULL |
+| 124      | Tierney    | Levey          | 5906224692 | Other  | 1982-07-18 00:00:00 | 4161abaf-9d78-48df-b566-57883a8dd7ab |     NULL | Mah?r?shtra       | Kaly?n             |    NULL |
+| 125      | Nataline   | Parsaye        | 6614568063 | Female | 1968-12-06 00:00:00 | 495ce5c2-492c-4222-8f92-83cd398ada08 |     NULL | Tamil N?du        | Madurai            |    NULL |
+| 126      | Elvira     | Dannye         | 7838787148 | Female | 1968-10-22 00:00:00 | e02c0fc7-5c6a-4a4d-bd85-decc32de2444 |     NULL | Jharkhand         | Jamshedpur         |    NULL |
+| 127      | Charmaine  | Lilybelle      | 6417349945 | Male   | 1942-05-27 00:00:00 | c9af1992-39dd-4aea-b0a5-8f90ae6cee86 |     NULL | Mah?r?shtra       | N?sik              |    NULL |
+| 128      | Gilda      | Torray         | 6231972508 | Male   | 1958-01-16 00:00:00 | 8ac0c35d-aae4-4675-b1b3-9d5ccbc64568 |     NULL | Hary?na           | Far?d?b?d          |    NULL |
+| 129      | Anthia     | Bohlin         | 2550374290 | Male   | 1962-05-01 00:00:00 | 204e501d-5314-4f5d-98b2-52a1406c337d |     NULL | Mah?r?shtra       | Aurang?b?d         |    NULL |
+| 130      | Molli      | Schroth        | 4296757592 | Male   | 1976-08-31 00:00:00 | 08a08202-d2c4-4545-b6b5-ae72d137f6dd |     NULL | Gujar?t           | R?jkot             |    NULL |
+| 131      | Raquela    | Sikorski       | 4132966328 | Male   | 1949-09-05 00:00:00 | c88ad278-d353-4742-b93c-2f7bab2dde61 |     NULL | Uttar Pradesh     | Meerut             |    NULL |
+| 132      | Alyda      | Jalbert        | 4185531692 | Other  | 1993-01-01 00:00:00 | 4c33c631-e894-4a6e-b537-f7d51544e4f6 |     NULL | Madhya Pradesh    | Jabalpur           |    NULL |
+| 133      | Beatriz    | Roche          | 7905789549 | Other  | 1936-02-10 00:00:00 | 352a5252-14c2-4c15-9091-f8437741c140 |     NULL | Mah?r?shtra       | Th?ne              |    NULL |
+| 134      | Brietta    | Birdella       | 5655882869 | Male   | 1961-08-24 00:00:00 | 65645d7e-7ffd-4700-be4c-067b1c467a0a |     NULL | Jharkhand         | Dhanb?d            |    NULL |
+| 135      | Codie      | Lissi          | 5974808976 | Female | 1912-11-20 00:00:00 | 94b706ad-264e-4af4-be83-5678daba3194 |     NULL | Uttar Pradesh     | Allah?b?d          |    NULL |
+| 136      | Oralee     | Campball       | 5861088878 | Male   | 1996-01-18 00:00:00 | 8bb556fd-a001-436b-a683-ad5ce0832603 |     NULL | Uttar Pradesh     | V?r?nasi           |    NULL |
+| 137      | Bill       | Melan          | 7991773257 | Other  | 2009-04-03 00:00:00 | 9d382ca1-f7c4-46ea-939c-b259389837a8 |     NULL | Jammu and Kashm?r | Sr?nagar           |    NULL |
+| 138      | Paola      | Jehu           | 6756546354 | Male   | 1907-07-01 00:00:00 | 72bfb108-0873-4ed0-84ab-d5b8064399a3 |     NULL | Punjab            | Amritsar           |    NULL |
+| 139      | Nollie     | Joni           | 8677232928 | Female | 1925-01-19 00:00:00 | 6f7f9270-9a79-43b4-b628-60958ac55a88 |     NULL | Uttar Pradesh     | Al?garh            |    NULL |
+| 140      | Gisela     | Kamaria        | 2207590760 | Female | 1915-02-24 00:00:00 | ba3f196a-4a63-4878-84c5-2bdaf4df5bc6 |     NULL | Mah?r?shtra       | Bhiwandi           |    NULL |
+| 141      | Maisey     | Alice          | 1861730902 | Female | 1961-09-27 00:00:00 | 331c3ced-f09e-49f4-91cd-5406f4470a2b |     NULL | Madhya Pradesh    | Gwalior            |    NULL |
+| 142      | Luci       | Trinetta       | 6469353400 | Other  | 1923-01-13 00:00:00 | 85611a7a-d81c-48d5-9f9d-e8ceb2a97d7a |     NULL | Chhatt?sgarh      | Bhilai             |    NULL |
+| 143      | Marleah    | Glenden        | 8009915045 | Male   | 1931-08-15 00:00:00 | 321a730d-6a3a-4631-a546-8cab14c1ca28 |     NULL | West Bengal       | H?ora              |    NULL |
+| 144      | Sherrie    | Fry            | 8228604496 | Female | 1960-03-26 00:00:00 | 1e3376da-da99-4ffe-8f4a-50520c632a0d |     NULL | Jharkhand         | R?nchi             |    NULL |
+| 145      | Maryellen  | Quent          | 7628529691 | Male   | 1971-12-21 00:00:00 | 89c5cfea-c9ed-43ae-aae2-3897f7f345f7 |     NULL | Andhra Pradesh    | Bezw?da            |    NULL |
+| 146      | Cordi      | Wilona         | 2347439542 | Female | 1992-01-18 00:00:00 | a2e009fe-fe35-4575-8a1a-afd30f4ef63e |     NULL | Chand?garh        | Chand?garh         |    NULL |
+| 147      | Helsa      | Buckler        | 7572525823 | Female | 1920-03-25 00:00:00 | ec434347-b982-4e94-af17-482837d759de |     NULL | Karn?taka         | Mysore             |    NULL |
+| 148      | Karly      | Carri          | 1639382440 | Other  | 1978-10-14 00:00:00 | fa08ec8e-d534-49d2-a922-e45309dfee0c |     NULL | Chhatt?sgarh      | Raipur             |    NULL |
+| 149      | Merci      | Wolfgram       | 9145406788 | Male   | 1961-05-07 00:00:00 | ea421bfd-f89a-41d9-833c-524afeebfc1e |     NULL | R?jasth?n         | Kota               |    NULL |
+| 150      | Jaclyn     | Rese           | 7642061498 | Female | 1992-04-06 00:00:00 | 6c32db3f-3a57-4f07-b5a9-d22b24a1b7c6 |     NULL | Uttar Pradesh     | Bareilly           |    NULL |
+| 151      | Corina     | Mintz          | 8781297739 | Male   | 2020-09-19 00:00:00 | b3189abe-7b38-40d0-98c5-58553ccc3cc2 |     NULL | R?jasth?n         | Jodhpur            |    NULL |
+| 152      | Ardys      | Orpah          | 4983671811 | Female | 1946-04-03 00:00:00 | 46f180b3-1095-4179-a2aa-02408f344942 |     NULL | Tamil N?du        | Coimbatore         |    NULL |
+| 153      | Cassandra  | Ciapas         | 8665908041 | Female | 1912-01-18 00:00:00 | 44a952e2-c3e4-4b78-85a5-71467134fc72 |     NULL | Assam             | Dispur             |    NULL |
+| 154      | Ekaterina  | Phaidra        | 3400247054 | Other  | 1903-12-17 00:00:00 | 867236fb-bca9-4a67-8c46-b344edaabfd9 |     NULL | Assam             | Guw?h?ti           |    NULL |
+| 155      | Rosanne    | Buttaro        | 9316032298 | Male   | 1918-04-11 00:00:00 | 236e0305-3184-495e-9814-73531b25f7b3 |     NULL | Mah?r?shtra       | Sol?pur            |    NULL |
+| 156      | Adelle     | Zrike          | 1964534019 | Male   | 2006-02-23 00:00:00 | f705847f-ba53-4796-8a66-52346684b88b |     NULL | Tamil N?du        | Trichinopoly       |    NULL |
+| 157      | Millie     | Malvino        | 2368255233 | Male   | 1910-12-24 00:00:00 | fe97389c-af13-43c5-8ebf-ed8a89148783 |     NULL | Karn?taka         | Hubli              |    NULL |
+| 158      | Mildrid    | Toni           | 4431195799 | Male   | 1936-02-01 00:00:00 | 96f5e7c3-37ee-4a49-a1a4-4e7cf63e7f30 |     NULL | Punjab            | Jalandhar          |    NULL |
+| 159      | Jacquetta  | Hubert         | 3582953738 | Other  | 1960-03-19 00:00:00 | 2664d9f7-fd16-4145-9fa3-6a3146aa48f6 |     NULL | Odisha            | Bhubaneshwar       |    NULL |
+| 160      | Fina       | Noam           | 6528777472 | Female | 1971-05-31 00:00:00 | 1c17f7a0-e6e3-4a92-a2f4-18d31af92886 |     NULL | Mah?r?shtra       | Bhayandar          |    NULL |
+| 161      | Jennica    | Santoro        | 2687136867 | Female | 1965-10-15 00:00:00 | 9f569f2c-3209-48e2-9979-4d62cde03ab1 |     NULL | Uttar Pradesh     | Mor?d?b?d          |    NULL |
+| 162      | Layla      | Kenwood        | 4838317752 | Male   | 2005-11-22 00:00:00 | 00d22bed-6424-49d9-8a66-2db23e64bdc2 |     NULL | Mah?r?shtra       | Kolh?pur           |    NULL |
+| 163      | Katleen    | Erminia        | 5879978905 | Male   | 1916-12-07 00:00:00 | dacad33b-c902-4891-bfc7-ef39242865e1 |     NULL | Kerala            | Thiruvananthapuram |    NULL |
+| 164      | Susette    | Phyllis        | 8711531884 | Other  | 1963-06-12 00:00:00 | 44b109ff-820c-4e17-ad37-9307317a4475 |     NULL | Uttar Pradesh     | Sah?ranpur         |    NULL |
+| 165      | Karina     | Rosemary       | 9943851574 | Other  | 1963-08-31 00:00:00 | 14bd1373-454b-4885-bfac-7a44e057a9a5 |     NULL | Telangana         | Warangal           |    NULL |
+| 166      | Kenna      | Sawtelle       | 5102610248 | Male   | 1936-07-11 00:00:00 | 58aee813-3b81-45ce-9ce7-2304fe886216 |     NULL | Tamil N?du        | Salem              |    NULL |
+| 167      | Krystle    | Pernick        | 4791221889 | Female | 1953-08-22 00:00:00 | ee03ac1d-af04-4e6c-9298-3d2d89d1a74f |     NULL | Mah?r?shtra       | M?legaon           |    NULL |
+| 168      | Veda       | Sothena        | 5832197058 | Male   | 1998-03-01 00:00:00 | 28708f3a-a685-438e-857d-d232cfb5b068 |     NULL | Kerala            | Kochi              |    NULL |
+| 169      | Talya      | Gladstone      | 5072289332 | Other  | 2008-11-23 00:00:00 | 9268c113-b5b8-4e4f-8366-a4238b6fb460 |     NULL | Uttar Pradesh     | Gorakhpur          |    NULL |
+| 170      | Lelah      | Colleen        | 2730057544 | Female | 1944-06-21 00:00:00 | 76945168-3366-489f-a3bd-dfd25cf92c4a |     NULL | Karn?taka         | Shimoga            |    NULL |
+| 171      | Kerrin     | Bivins         | 5379996753 | Male   | 2002-04-09 00:00:00 | 6b8fc8af-3cb0-4ff8-9a49-4e1886c3e7bf |     NULL | Tamil N?du        | Tirupp?r           |    NULL |
+| 172      | Caryl      | Hieronymus     | 4344588507 | Other  | 1904-07-12 00:00:00 | 4cf8f1ad-111a-40cd-b556-dd3428c7673d |     NULL | Andhra Pradesh    | Gunt?r             |    NULL |
+| 173      | Anica      | Deegan         | 3869001052 | Female | 1930-11-30 00:00:00 | bd17c407-94b6-465a-b882-ae3953ad4663 |     NULL | Odisha            | Raurkela           |    NULL |
+| 174      | Romona     | Amasa          | 3355150875 | Male   | 1912-04-15 00:00:00 | 99bda896-9143-4944-884a-f57ad768f81b |     NULL | Karn?taka         | Mangalore          |    NULL |
+| 175      | Chickie    | Damarra        | 3524142637 | Female | 2014-07-29 00:00:00 | d2a305cb-9fa2-41da-b39a-622589b9577f |     NULL | Mah?r?shtra       | N?nded             |    NULL |
+| 176      | Riannon    | Marcellus      | 1420273520 | Other  | 1989-07-29 00:00:00 | 757e9a6e-f212-4b0b-bf3f-785f6c4d7c10 |     NULL | Odisha            | Cuttack            |    NULL |
+| 177      | Dorothy    | Allys          | 6689289860 | Other  | 1904-09-30 00:00:00 | 014fca63-261c-44e3-8728-96cc4863fe69 |     NULL | Mah?r?shtra       | Ch?nda             |    NULL |
+| 178      | Edyth      | Roumell        | 6493542028 | Other  | 2010-09-23 00:00:00 | 6c25d9f0-9f52-4070-9f08-cd7b9105ec1a |     NULL | Uttarakhand       | Dehra D?n          |    NULL |
+| 179      | Andeee     | Natalia        | 3798366033 | Male   | 1929-08-09 00:00:00 | 07c2a996-56d1-4c93-81af-988922cf07a4 |     NULL | West Bengal       | Durg?pur           |    NULL |
+| 180      | Coral      | Ietta          | 4917209762 | Other  | 1938-12-13 00:00:00 | bbad3e13-207e-4e8f-8d82-47428dc074b4 |     NULL | West Bengal       | ?sansol            |    NULL |
+| 181      | Suzette    | Bettine        | 3538473669 | Other  | 1934-06-27 00:00:00 | 6dc15b45-947c-4db8-bf68-7aecdf5df0fc |     NULL | Gujar?t           | Bh?vnagar          |    NULL |
+| 182      | Sheelagh   | Brian          | 7337379927 | Other  | 1919-10-14 00:00:00 | 3259a640-1d69-4b5c-ad1d-1d259ab7a828 |     NULL | Mah?r?shtra       | Amr?vati           |    NULL |
+| 183      | Sam        | Wolfgram       | 3363112747 | Female | 1936-03-31 00:00:00 | 31fbe778-975b-493e-9ace-5431153096d9 |     NULL | Andhra Pradesh    | Nellore            |    NULL |
+| 184      | Carolina   | Esmaria        | 7390727820 | Female | 1991-07-06 00:00:00 | 6a7162ab-9efa-4fc5-b7ee-965182ca3d80 |     NULL | R?jasth?n         | Ajmer              |    NULL |
+| 185      | Juliane    | Barrus         | 5854585564 | Other  | 1954-08-24 00:00:00 | 997d17bc-f5c7-4a77-ad9d-2590da2eeedf |     NULL | Tamil N?du        | Tinnevelly         |    NULL |
+| 186      | Pierette   | Monk           | 4458765502 | Male   | 1994-03-08 00:00:00 | a9245a5b-48e8-49bd-a2c8-28afefadec0b |     NULL | R?jasth?n         | B?kaner            |    NULL |
+| 187      | Kary       | Cosenza        | 3442698552 | Other  | 1932-07-28 00:00:00 | ed2b43b8-7704-4406-b572-b6acd8ccb68b |     NULL | Tripura           | Agartala           |    NULL |
+| 188      | Lita       | Kosey          | 4299273240 | Male   | 2014-02-17 00:00:00 | fa4eccdf-15b4-450c-bff8-80d72efa8f8d |     NULL | Madhya Pradesh    | Ujjain             |    NULL |
+| 189      | Carmela    | Schalles       | 7902450796 | Male   | 1915-09-12 00:00:00 | ecf7b9ed-c5f7-45ec-8bcd-2b99bf7e44fc |     NULL | Uttar Pradesh     | Jh?nsi             |    NULL |
+| 190      | Merle      | Tomasina       | 4613682677 | Female | 1916-12-27 00:00:00 | 59f03d06-fc53-4ce6-81c8-0732632a5fad |     NULL | Mah?r?shtra       | Ulh?snagar         |    NULL |
+| 191      | Justinn    | Kare           | 9925543488 | Female | 1933-10-27 00:00:00 | bda081a1-63b9-4cae-931e-a19d2938a2cd |     NULL | Karn?taka         | Davangere          |    NULL |
+| 192      | Ellette    | Solitta        | 3049805667 | Other  | 1980-02-08 00:00:00 | f8422e3f-cd52-432e-8885-fa907229b4e0 |     NULL | Jammu and Kashm?r | Jammu              |    NULL |
+| 193      | Dagmar     | Jotham         | 3456395489 | Female | 1909-06-18 00:00:00 | b15c0b51-206e-45ff-8b61-e1996ad59be3 |     NULL | Karn?taka         | Belgaum            |    NULL |
+| 194      | Elbertina  | Thad           | 9746520047 | Male   | 1943-07-25 00:00:00 | a94fbe26-92ec-427f-a7ab-33978d281b53 |     NULL | Karn?taka         | Gulbarga           |    NULL |
+| 195      | Halette    | Hedve          | 7309626169 | Other  | 1967-05-19 00:00:00 | 121bedf4-5375-4193-80d9-6620ea3f430f |     NULL | Gujar?t           | J?mnagar           |    NULL |
+| 196      | Flory      | Bendick        | 3395908377 | Female | 1922-09-25 00:00:00 | e25dfc55-aab6-4c68-9294-b8161a56fb84 |     NULL | Mah?r?shtra       | Dh?lia             |    NULL |
+| 197      | Shandie    | Bennie         | 8818021438 | Male   | 1952-04-26 00:00:00 | de35fba2-ca12-4072-9c39-708763fa083f |     NULL | Bih?r             | Gaya               |    NULL |
+| 198      | Margarette | Chinua         | 5766694826 | Other  | 2018-10-24 00:00:00 | f5784d8c-bf26-4875-ab52-e1534d511382 |     NULL | Mah?r?shtra       | Jalgaon            |    NULL |
+| 199      | Lanae      | Doig           | 7057933833 | Other  | 1976-07-04 00:00:00 | 8fee3d52-9186-42cb-bc40-a68ffee9151c |     NULL | Andhra Pradesh    | Kurnool            |    NULL |
+| 200      | Pearline   | Ciro           | 3439619967 | Female | 1939-06-08 00:00:00 | a7e459ed-a956-4749-a8c6-4ed2c4f68be9 |     NULL | R?jasth?n         | Udaipur            |    NULL |
+| c        | NULL       | Andhra Pradesh | Kurnool    | NULL   | NULL                | NULL                                 |     NULL | NULL              | NULL               |    NULL |
+| 200      | Pearline   | Ciro           | 3439619967 | Female | 1939-06-08 00:00:00 | a7e459ed-a956-4749-a8c6-4ed2c4f68be9 |     NULL | R?jasth?n         | Udaipur            |    NULL |
+| NULL     | NULL       | NULL           | NULL       | NULL   | NULL                | NULL                                 |     NULL | NULL              | NULL               |    NULL |
++----------+------------+----------------+------------+--------+---------------------+--------------------------------------+----------+-------------------+--------------------+---------+
+103 rows in set (0.00 sec)
+
+mysql>
