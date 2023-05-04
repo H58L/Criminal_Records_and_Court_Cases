@@ -1,0 +1,101 @@
+CrimeID,HU,VictimID,State,City,Pincode,CriminalID,CaseID,Courts,Status
+207,0.522377887,186,Ra）astha］,Bikaner,334001,323,405,,SOLVED
+229,0.350700137,188,Madhya Pradesh,Ujjain,456664,365,454, Telangana High Court                                               ,SOLVED
+272,0.527156638,131,Uttar Pradesh,Meerut,250001,398,474,,SOLVED
+292,0.36835947,109,Gujara》,Surat,395007,397,423,,SOLVED
+209,0.804069792,103,West Bengal,Kolka》a,700019,350,425, Jammu and Kashmir High Court                                       ,SOLVED
+295,0.668305719,199,Andhra Pradesh,Kurnool,518006,375,414,,SOLVED
+234,0.767539206,157,Karnataka,Hubli,580028,353,426, Orissa High Court                                                  ,SOLVED
+231,0.777057478,162,Mahara《htra,Kolhapur,416011,362,484,,SOLVED
+297,0.636936097,155,Mahara《htra,Solapur,413005,383,469,,UNSOLVED
+259,0.772839284,125,Tamil Nadu,Madurai,625514,382,424,,UNSOLVED
+241,0.163696285,101,Delhi,Delhi,110001,304,412,,SOLVED
+242,0.345795785,154,Assam,Guwahati,781010,349,489,,UNSOLVED
+276,0.83160834,196,Mahara《htra,Mumbai,400001,325,480,,UNSOLVED
+211,0.942801461,182,Mahara《htra,Amravati,444901,324,467,,SOLVED
+271,0.285196593,104,Karnataka,Bangalore,560030,336,497,Bombay High Court                                                  ,SOLVED
+230,0.527181853,133,Mahara《htra,Thane,400708,381,446,,SOLVED
+220,0.914183104,134,Jharkhand,Dhanbad,826001,306,436, Manipur High Court                                                 ,SOLVED
+261,0.061554901,110,Uttar Pradesh,Lucknow,226004,329,470,,SOLVED
+288,0.66030358,156,Tamil Nadu,Trichinopoly,620023,372,420,,SOLVED
+248,0.783216078,105,Tamil Nadu,Chennai,600082,364,477,,UNSOLVED
+273,0.984149374,189,Uttar Pradesh,Jha］si,284127,320,433, Karnataka High Court                                               ,SOLVED
+287,0.799410126,193,Karnataka,Belgaum,590009,356,409, Chhattisgarh High Court                                            ,SOLVED
+203,0.685270967,132,Madhya Pradesh,Jabalpur,482003,369,458,,SOLVED
+205,0.175797762,107,Mahara《htra,Pune,411014,331,450,,SOLVED
+289,0.599766292,185,Tamil Nadu,Tinnevelly,627358,348,485,,SOLVED
+253,0.088059024,165,Telangana,Warangal,506013,309,422,,SOLVED
+240,0.224073357,143,West Bengal,Haora,711105,391,453, Madras High Court                                                  ,SOLVED
+300,0.981137664,197,Bihar,Gaya,823005,395,488,,SOLVED
+210,0.301710667,124,Mahara《htra,Kalyan,400708,388,413,,SOLVED
+275,0.126432761,128,Haryana,Faridabad,121106,330,419,,UNSOLVED
+212,0.783964204,176,Odisha,Cuttack,753013,387,452, Himachal Pradesh High Court                                        ,SOLVED
+279,0.169257883,102,Mahara《htra,Mumbai,400014,376,417,,SOLVED
+213,0.891579121,158,Punjab,Jalandhar,144005,357,481,,UNSOLVED
+224,0.548596539,161,Uttar Pradesh,Moradabad,244104,384,435, Andhra Pradesh High Court                                          ,SOLVED
+239,0.111792073,150,Uttar Pradesh,Bareilly,243122,359,478,,SOLVED
+245,0.210411473,168,Kerala,Kochi,682005,374,461,,UNSOLVED
+233,0.013683373,108,Gujara》,Ahmedabad,382460,352,401,,SOLVED
+225,0.28963047,145,Andhra Pradesh,Bezwada,520011,400,456,,SOLVED
+202,0.333673532,163,Kerala,Thiruvananthapuram,695004,378,429,,SOLVED
+270,0.614992308,153,Assam,Dispur,781005,367,491,,SOLVED
+219,0.640557052,142,Chahattisgarh,Bhilai,490026,366,457, Punjab and Haryana High Court                                      ,SOLVED
+266,0.733391956,140,Mahara《htra,Bhiwandi,421311,354,449,,SOLVED
+286,0.476766965,187,Tripura,Agartala,799010,345,415,,SOLVED
+298,0.13321546,174,Karnataka,Mangalore,575008,332,468,,SOLVED
+296,0.112937343,138,Punjab,Amritsar,1430002,342,437,,SOLVED
+257,0.827939519,113,Uttar Pradesh,Mirzapur,231305,326,439, Jharkhand High Court                                               ,SOLVED
+267,0.681050439,183,Andhra Pradesh,Nellore,524001,393,455, Calcutta High Court                                                ,SOLVED
+265,0.644349031,191,Karnataka,Davangere,577005,321,404,,SOLVED
+243,0.696846324,115,Uttar Pradesh,Ghaziabad,201015,317,473,,SOLVED
+281,0.625542335,141,Madhya Pradesh,Gwalior,474009,392,443,,UNSOLVED
+294,0.273332228,130,Gujara》,Rajkot,360055,386,482,,SOLVED
+264,0.649091317,179,West Bengal,Durgapur,713212,346,438, Supreme Court                                                      ,SOLVED
+246,0.282140632,164,Uttar Pradesh,Saharanpur,247122,312,494, Uttarakhand High Court                                             ,SOLVED
+237,0.936398313,181,Gujara》,Bhavanagar,364006,333,463, High Court for the Union Territory of Jammu and Kashmir and Ladakh ,SOLVED
+244,0.374381221,160,Mahara《htra,Bhayandar,401101,302,464,,SOLVED
+299,0.860430394,116,Madhya Pradesh,Indore,453551,314,441,,SOLVED
+217,0.07047398,148,Chahattisgarh,Raipur,492006,301,451,,UNSOLVED
+293,0.974757913,123,Uttar Pradesh,Agra,283101,360,402,,SOLVED
+228,0.660663653,106,Telangana,Hyderabad,500091,327,448,,UNSOLVED
+226,0.40845289,166,Tamil Nadu,Salem,636001,341,487,,UNSOLVED
+280,0.362247478,178,Uttarakhand,Dehradun,248012,380,475,,UNSOLVED
+277,0.452579775,173,Odisha,Raurkela,769042,319,434,,SOLVED
+268,0.662073259,118,Andhra Pradesh,Vishakhapatnam,530003,355,407,,SOLVED
+251,0.163377781,146,Chandigarh,Chandigarh,160019,347,444,,SOLVED
+206,0.070418872,172,Andhra Pradesh,Guntur,522007,343,403,,UNSOLVED
+250,0.61626921,111,Ra）astha］,Jaipur,302001,394,492,,UNSOLVED
+263,0.508934393,200,Ra）astha］,Udaipur,313003,315,479, Kerala High Court                                                  ,SOLVED
+214,0.164323976,190,Mahara《htra,Ulhasnagar,421103,370,421,,SOLVED
+215,0.802738486,169,Uttar Pradesh,Gorakhpur,273202,390,460,,SOLVED
+227,0.668736844,147,Karnataka,Mysore,570012,351,490,,SOLVED
+255,0.579926298,136,Uttar Pradesh,Varanasi,212011,334,430,,SOLVED
+247,0.586439729,137,Jammu and Kashmir,Srinagar,190001,344,418,,SOLVED
+201,0.500255032,159,Odisha,Bhubaneshwar,751019,373,406,,UNSOLVED
+269,0.12823998,144,Jharkhand,Ranchi,834001,368,483,,SOLVED
+204,0.446430959,149,Ra）astha］,Kota,324007,361,411,,UNSOLVED
+256,0.915367287,151,Ra）astha］,Jodhpur,342004,379,500, Tripura High Court                                                 ,SOLVED
+222,0.550153329,126,Jharkhand,Jamshedpur,832301,316,447,,SOLVED
+216,0.079631512,129,Mahara《htra,Aurangabad,431103,305,495, Meghalaya High Court                                               ,SOLVED
+252,0.354593524,120,Mahara《htra,Chinchvad,411019,310,428, Delhi High Court                                                   ,SOLVED
+278,0.444620892,175,Mahara《htra,Nanded,431601,377,440, Gujarat High Court                                                 ,SOLVED
+290,0.566577858,122,Punjab,Ludhiana,141402,389,465,,UNSOLVED
+218,0.678198665,171,Tamil Nadu,Chennai,600018,371,498, Rajasthan High Court                                               ,SOLVED
+223,0.01965274,198,Mahara《htra,Jalgaon,425101,396,416,,SOLVED
+291,0.873708655,114,Mahara《htra,Nagpur,440001,335,427,Allahabad High Court                                               ,SOLVED
+249,0.251805569,127,Mahara《htra,Nashik,423101,358,499,,SOLVED
+232,0.571477891,119,Madhya Pradesh,Bhopal,462042,307,476, Patna High Court                                                   ,SOLVED
+260,0.808355577,135,Uttar Pradesh,Allahabad,211001,385,462,,SOLVED
+254,0.262897804,180,West Bengal,Kolkata,700020,328,471,,SOLVED
+282,0.958339431,152,Tamil Nadu,Coimbatore,641008,308,496, Sikkim High Court                                                  ,SOLVED
+238,0.241362369,194,Karnataka,Gulbarga,585105,318,431,,SOLVED
+208,0.550775769,112,Uttar Pradesh,Cawnpore,209401,322,466,,SOLVED
+274,0.878887959,167,Mahara《htra,Malegaon,423201,399,459,,SOLVED
+221,0.569801781,139,Uttar Pradesh,Aligarh,202002,339,493,,SOLVED
+235,0.38838064,195,Gujara》,Jamnagar,361110,311,432,,SOLVED
+236,0.219948299,117,Gujara》,Vadodara,391510,337,472, Madhya Pradesh High Court                                          ,SOLVED
+284,0.455827263,184,Ra）astha］,Ajmer,305007,363,486,,UNSOLVED
+262,0.657887521,170,Karnataka,Shimoga,577216,313,408,,SOLVED
+258,0.131695348,192,Jammu and Kashmir,Jammu,181145,303,445,,SOLVED
+283,0.194340061,177,Mahara《htra,Chandrapur,442406,338,410,,SOLVED
+285,0.047356298,121,Bihar,Patna,801110,340,442,,UNSOLVED

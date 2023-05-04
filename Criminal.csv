@@ -1,0 +1,101 @@
+CriminalID,CrimeID,FirstName,LastName,Gender,criminal_dob,PhoneNumber,Aadhar No.,States,City,Pincode
+301,270,Berget,Kiersten,Male,18-03-1960,6617677485,cf2b9823-51b3-461e-aa0d-5593fade75ba,Delhi,Delhi,110001
+302,286,Ninnetta,Boehike,Other,20-11-1983,2918933653,a9efcecd-f4c9-4f03-9db1-2e71b83da46d,Mahara《htra,Mumbai,400014
+303,269,Raf,Fosque,Male,17-06-1947,2990184679,165ff487-2313-4d1d-892b-8a0fbf4dacb6,West Bengal,Kolka》a,700019
+304,242,Anallese,Lenny,Female,05-10-2008,9104132434,6a14985e-35e8-46a5-a452-84f0610bb7d2,Karnataka,Bangalore,560030
+305,274,Tamqrah,Allina,Male,06-07-2026,8576958338,78faa58b-0ffc-4732-b9f4-cc1d09f4e783,Tamil Nadu,Chennai,600082
+306,279,Verla,Sperling,Male,11-07-1940,1735547701,3506d9c0-4e46-490b-9f69-f7f5c3615f3b,Telangana,Hyderabad,500091
+307,282,Mildrid,Monk,Male,29-11-1965,8890587000,596e1185-f6a3-4321-9d6e-8fa346d7faf4,Mahara《htra,Pune,411014
+308,257,Rosanne,Garbe,Female,24-03-2010,9025551389,4ce56b20-9aa5-4907-b8da-9c3b0950ac95,Gujara》,Ahmedabad,382460
+309,252,Deloria,Gibbeon,Male,28-09-1988,1574993815,c29ab11e-358a-40b3-b4d2-31d121f505e2,Gujara》,Surat,395007
+310,239,Nadine,Garbe,Male,12-01-2016,8291014682,154ebe75-91c8-4c51-b0c9-67bb67650e67,Uttar Pradesh,Lucknow,226004
+311,225,Aubrie,Reneta,Other,19-10-1982,7850370532,3d46c914-6716-458a-a7a2-52bb587ee54b,Ra）astha］,Jaipur,302001
+312,273,Arabel,Matthew,Female,07-02-1942,6849277382,d7bab3ac-b249-40f4-907c-d27c38909c3e,Uttar Pradesh,Cawnpore,209401
+313,277,Consuela,Infield,Female,07-05-2005,7791629650,9329f09e-206d-4be2-af13-44e2d70a72d1,Uttar Pradesh,Mirzapur,231305
+314,289,Karina,Colbert,Female,26-11-2025,3167936586,70d2d7eb-0bf6-498a-ac5c-c2658ea93e07,Mahara《htra,Nagpur,440001
+315,217,Danny,Santoro,Other,16-03-2013,1932446251,b02be070-0332-4161-a6a9-c8a14e257526,Uttar Pradesh,Ghaziabad,201015
+316,231,Rosanne,Jobi,Other,09-11-1996,2976312886,f91e82b6-5b6d-4c10-90b5-555975e46eb0,Madhya Pradesh,Indore,453551
+317,281,Sheree,Pattin,Other,15-11-1994,7097451335,fe2e2220-7066-407c-84d7-ca7d370a977c,Gujara》,Vadodara,391510
+318,290,Bobbi,Randene,Male,20-10-2029,3608373028,83813dca-49e1-4041-853a-d731bbd96783,Andhra Pradesh,Vishakhapatnam,530003
+319,228,Oralee,Diann,Female,26-06-1954,6827497403,20b67ddb-b083-4059-825d-d4d4cc717ffd,Madhya Pradesh,Bhopal,462042
+320,226,Fayre,Vins,Female,26-06-1949,6316610842,547f3106-e1dc-4529-908b-a5866fea2308,Mahara《htra,Chinchvad,411019
+321,210,Allis,Ball,Female,20-03-2025,8079432111,e58b1a15-6456-4583-90c0-91a5a98bb3e6,Bihar,Patna,801110
+322,278,Drucie,Magnolia,Other,21-05-2010,5298733624,bf737d25-4d40-4792-8480-b6c2ea03056a,Punjab,Ludhiana,141402
+323,205,Eolanda,Dyche,Male,25-01-2014,6303406516,1f2958df-8963-4473-b20a-30c6edda33d4,Uttar Pradesh,Agra,283101
+324,219,Desirae,Shaver,Other,26-11-2019,4541589353,7c0fa895-d2ac-4dda-8d69-39c10eab5c0d,Mahara《htra,Kalyan,400708
+325,220,Doralynne,Muriel,Female,18-11-2021,5388254406,5ffd289b-5f33-4a21-a5ed-7a354326ff7b,Tamil Nadu,Madurai,625514
+326,208,Lorie,Junie,Male,10-02-1995,1268031134,2111aabb-c954-4225-bd64-dea1868ea9e9,Jharkhand,Jamshedpur,832301
+327,222,Myriam,Barbey,Male,24-08-2007,8321417452,5a7c55b7-a44a-453c-8a8c-769dc0bd936d,Mahara《htra,Nashik,423101
+328,229,Hettie,Raul,Other,18-09-1942,8372961309,f8dfe2aa-11c7-4863-a926-b7a16266abde,Haryana,Faridabad,121106
+329,263,Jennica,Henrie,Male,06-11-1935,4488656338,cd485f77-b93a-40fb-901e-7d3bfde0728c,Mahara《htra,Aurangabad,431103
+330,234,Catharine,Halsey,Other,02-11-2006,4758371187,12282a42-49b5-47b9-bdd7-07700af2e58c,Gujara》,Rajkot,360055
+331,209,Celestyna,Romelda,Other,04-12-1941,7450072968,89c5c7a9-dc61-4e1b-9e21-0ba0f44d0edc,Uttar Pradesh,Meerut,250001
+332,247,Gui,Lay,Male,06-04-1984,4123085342,d3193bc2-0c5e-4978-8472-6e3b4c8e4f96,Madhya Pradesh,Jabalpur,482003
+333,207,Jennica,Craggie,Other,26-12-1966,1707641821,effedc34-d17b-487d-be91-2bb6d138da67,Mahara《htra,Thane,400708
+334,288,Brynna,Aldric,Other,01-09-1998,7937077145,f48c55e1-0b87-4b3e-aef2-77d7e4d8d108,Jharkhand,Dhanbad,826001
+335,299,Genevra,Elsinore,Female,19-02-2017,6148909253,3e503305-a685-4ff8-b279-6ceead638cf6,Uttar Pradesh,Allahabad,211001
+336,284,Blondelle,Oriana,Male,22-12-1978,8792134269,2bc8ac4c-33ee-4073-b6c5-faef18a0862e,Uttar Pradesh,Varanasi,212011
+337,293,Ira,Shields,Other,01-10-2000,4449320985,d75d71fa-a3ac-4bea-8e24-bda727132659,Jammu and Kashmir,Srinagar,190001
+338,250,Katharina,Sholley,Other,02-11-2010,2825344673,8ad750d3-9205-4d60-976c-438fb90ee663,Punjab,Amritsar,1430002
+339,275,Delilah,Hoban,Female,10-07-2017,8240369616,7356b123-dd23-4ddf-bd55-ec374b2cd4eb,Uttar Pradesh,Aligarh,202002
+340,300,Adriana,Juan,Male,27-10-1995,2144844987,4bb3725d-338c-4ed7-8c6f-e974ccf8b7d3,Mahara《htra,Bhiwandi,421311
+341,201,Jenilee,Diann,Female,14-12-1946,5339709672,97dd6e64-e445-4a8f-8930-a8bdc1d59dcd,Madhya Pradesh,Gwalior,474009
+342,259,Charissa,Madox,Other,19-07-1988,1725287888,e75755c4-1b73-4a94-9fbd-b7e47de67717,Chahattisgarh,Bhilai,490026
+343,244,Corina,Wind,Other,17-07-2002,9763292466,8fea3846-7f3c-47d7-a414-315ddfe000f3,West Bengal,Haora,711105
+344,255,Flo,Carey,Male,03-11-2020,4472380880,4b7d865d-bfdd-4457-b2ce-800194e4286f,Jharkhand,Ranchi,834001
+345,283,Pamella,Ietta,Female,09-04-2008,3171311121,9492bb43-cb84-42bb-82d0-df37a9b61b87,Andhra Pradesh,Bezwada,520011
+346,223,Netty,Avi,Male,29-05-1968,1638508762,2f3de296-5b0f-4dff-840c-aa27d259cd29,Chandigarh,Chandigarh,160019
+347,243,Ulrike,Lunsford,Female,08-07-2013,5805666313,af6b6d6d-4244-4431-9065-4eb0b85e526f,Karnataka,Mysore,570012
+348,249,Kamilah,Lamoree,Male,07-06-2015,2784353127,f921c24d-e091-48ca-b51b-ff4e62e51fea,Chahattisgarh,Raipur,492006
+349,245,Arlena,Florina,Other,15-11-2029,1005312627,d0f22152-1b31-449d-b1d5-c0fdc924430d,Ra）astha］,Kota,324007
+350,253,Georgetta,Granoff,Other,12-12-2029,3600387135,38aef02e-ef85-40f3-8e38-655b0d360869,Uttar Pradesh,Bareilly,243122
+351,235,Fidelia,Blisse,Other,11-06-1939,1170453632,0d1eb27c-91ca-4f39-8bae-51c22144ee11,Ra）astha］,Jodhpur,342004
+352,206,Modestia,Llovera,Male,10-05-2019,2073493354,d2f43801-6826-43e3-8e0b-1d1f3dc492d9,Tamil Nadu,Coimbatore,641008
+353,213,Lauryn,Jacqui,Male,27-08-2019,1205795301,84fc775f-b5c8-478e-87b3-5928ac0d6a0d,Assam,Dispur,781005
+354,224,Kellen,Merna,Male,19-02-2016,8664128756,0075f8b2-cd2c-4c74-96da-b20efe8adc2d,Assam,Guwahati,781010
+355,262,Donetta,Salvidor,Female,24-11-1983,3984884011,7a3fc099-1951-4523-84f3-83fdab68628c,Mahara《htra,Solapur,413005
+356,214,Bertine,Ferrell,Female,19-09-2001,9324235016,b5f867b0-6e45-4811-a52b-b6b3adef73ef,Tamil Nadu,Trichinopoly,620023
+357,261,Vevay,Lumbard,Other,25-09-2007,6391038474,efde8a63-77c6-4506-9e90-9e553163cd53,Karnataka,Hubli,580028
+358,271,Jasmina,Mandler,Female,22-09-2002,1955794025,d772ed20-ff5f-43c0-a0fb-b3c099dcb851,Punjab,Jalandhar,144005
+359,266,Jacenta,Stuart,Male,26-03-1975,9694335951,d1db63ba-39fb-4065-ae83-5b4172e0d326,Odisha,Bhubaneshwar,751019
+360,297,Deane,Jerald,Female,24-08-1963,4945791899,4bd2b6be-1b43-43ac-9f34-f53f591c5793,Mahara《htra,Bhayandar,401101
+361,292,Fredericka,Arne,Female,30-01-1973,4358832553,680479f3-ea34-449f-b405-fde5b0306554,Uttar Pradesh,Moradabad,244104
+362,204,Adore,Riordan,Male,20-12-1991,9627526842,173210d2-7340-412f-9c50-0ef1dae4b56e,Mahara《htra,Kolhapur,416011
+363,256,Clo,Burnside,Other,27-08-1953,8547655149,d05ad019-d332-4a36-afdb-fbe162ad242c,Kerala,Thiruvananthapuram,695004
+364,227,Karly,Phaidra,Male,23-06-2011,2685872486,e99657ae-7082-4759-a802-a3d840cd337b,Uttar Pradesh,Saharanpur,247122
+365,240,Wanda,Weitman,Female,18-11-2005,1087231854,bbba1623-85b1-42a8-9b20-25fa20c172fd,Telangana,Warangal,506013
+366,296,Chrystel,Septima,Other,04-05-1951,2989045827,b1703064-7aa1-4614-8ff4-3a58c1d5f79e,Tamil Nadu,Salem,636001
+367,246,Tarra,Joachim,Male,05-05-1949,4070857269,b79eb728-ac73-40de-9d78-fecdaea41b6c,Mahara《htra,Malegaon,423201
+368,241,Brynna,Phyllis,Other,06-07-1991,6875793822,e3a80d18-992e-42cd-bc3c-bf161ebf3920,Kerala,Kochi,682005
+369,248,Odessa,Heisel,Other,22-07-1963,4908899736,bfb4b422-dc0f-447a-889c-321b61a36838,Uttar Pradesh,Gorakhpur,273202
+370,218,Elie,Ethban,Other,09-05-1998,5028448052,4e1fd425-a03a-4bad-bbe0-2bb94eab6fe4,Karnataka,Shimoga,577216
+371,265,Wileen,Carbo,Female,27-03-1971,7922181563,7eaaa5aa-6a1a-4702-b795-936a772178da,Tamil Nadu,Chennai,600018
+372,276,Winny,Faro,Other,09-03-1983,4309700985,be306e16-fa00-41e7-b963-13a0496bd516,Andhra Pradesh,Guntur,522007
+373,215,Hayley,Pitt,Male,25-06-1961,3168663249,36d624bf-27fb-408d-b772-7401ef535dc4,Odisha,Raurkela,769042
+374,203,Aaren,Verger,Female,19-04-2001,9319263462,554100dd-c7fa-43ad-87c0-e457577712ff,Karnataka,Mangalore,575008
+375,287,Blake,Eckblad,Other,17-10-2018,4632457424,c01f08c5-31ba-4d35-8b64-dd8f98ea8206,Mahara《htra,Nanded,431601
+376,264,Mariele,Lipson,Male,18-02-2004,2470404827,f544726f-116a-4781-bf68-00e1003e5603,Odisha,Cuttack,753013
+377,268,Veda,Burkle,Other,17-05-1950,5859245171,59cd2adf-65e3-40ad-8b5a-c7a3f0b3ee8a,Mahara《htra,Chandrapur,442406
+378,291,Fred,Jary,Male,12-01-1965,6337761382,c9de8666-9448-4c6c-9d96-13ed168ba168,Uttarakhand,Dehradun,248012
+379,216,Robinia,Wittie,Other,21-09-1986,6909609961,880e9169-9e6f-48fe-ac0e-1e30372d92df,West Bengal,Durgapur,713212
+380,236,Moyna,Tybald,Male,01-08-1946,3595889586,81f32593-aa79-44e8-8ea6-fd90f28e63cd,West Bengal,Kolkata,700020
+381,211,Krystle,Lynn,Other,25-04-2020,2876146015,244353b1-606e-401c-80ff-55d5bbe80b59,Gujara》,Bhavanagar,364006
+382,238,Camile,Bates,Other,17-01-1944,9101792150,e4fdd70b-e326-49c8-92c4-6b0e5f1cc130,Mahara《htra,Amravati,444901
+383,258,Gabi,Argus,Other,08-06-2022,3626367139,94ac9039-4463-4a62-9f93-818f51febe4c,Andhra Pradesh,Nellore,524001
+384,267,Sybille,Fitzsimmons,Other,03-12-2006,5999232200,224bcb78-8d23-4955-9e7f-d904f704d5a3,Ra）astha］,Ajmer,305007
+385,295,Rayna,Anestassia,Male,07-04-1958,3359452935,3789a859-ef64-466c-9f21-ee9194710aa0,Tamil Nadu,Tinnevelly,627358
+386,294,Felice,Ferrell,Other,03-12-2003,7163329417,b46fe548-ada7-460d-a8e8-0ee98d3253fd,Ra）astha］,Bikaner,334001
+387,230,Kara-Lynn,McCutcheon,Other,18-04-1930,3269348034,e6390496-f902-41f6-ae6d-04b1462e7389,Tripura,Agartala,799010
+388,221,Michaelina,Erich,Female,28-02-1965,7663526999,f2569750-d6cd-402f-a490-4ffed29dc643,Madhya Pradesh,Ujjain,456664
+389,233,Jenilee,Granoff,Female,18-02-1944,5182770362,c26efd15-8dea-4f71-a91a-ed5d3a55c557,Uttar Pradesh,Jha］si,284127
+390,202,Lacie,Bethany,Female,19-11-1946,3810408432,82e763b0-992a-434c-b41b-a4b05ec61257,Mahara《htra,Ulhasnagar,421103
+391,212,Charlena,Sperling,Other,05-10-2019,5926526709,b4b66176-2571-40f3-8bcc-de6df1a15438,Karnataka,Davangere,577005
+392,280,Amalie,Sherrie,Male,06-12-1975,5630273015,9f7a08a1-b6b8-42ab-9410-3168f56b09ae,Jammu and Kashmir,Jammu,181145
+393,237,Amara,Tjon,Male,08-12-1961,6362387694,383bfd31-996a-4b08-ab3e-66b6dbd59afd,Karnataka,Belgaum,590009
+394,298,Rhoda,Yerkovich,Female,14-08-1942,3589719284,4fd299a7-0439-4db2-84b4-05819ff53a84,Karnataka,Gulbarga,585105
+395,251,Cindelyn,Rogerio,Other,07-12-1964,5485057609,2f544812-2902-4f17-a637-d04d2d06c6fa,Gujara》,Jamnagar,361110
+396,254,Sandie,Morrill,Female,22-02-2008,5177719984,90bc6a1c-c883-4cbd-a365-22874893e20b,Mahara《htra,Mumbai,400001
+397,285,Consuela,Wattenberg,Other,10-10-1987,3486076570,54e6e1bc-52d3-465f-bd3e-7b8bbd660f8f,Bihar,Gaya,823005
+398,272,Marti,Kronfeld,Other,24-05-1956,8502916342,92458105-ead9-46eb-a27d-bd41a6caa446,Mahara《htra,Jalgaon,425101
+399,260,Dyann,Rogerio,Female,09-01-1936,1166972437,ee318441-9a90-46dd-9d70-e4cfba09ee0d,Andhra Pradesh,Kurnool,518006
+400,232,Emylee,Vary,Female,25-03-2007,6764309050,ca673ced-1055-43df-a1a4-ed115cb88882,Ra）astha］,Udaipur,313003

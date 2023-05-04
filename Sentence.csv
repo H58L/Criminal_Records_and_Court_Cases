@@ -1,0 +1,101 @@
+SentenceID,CaseID,StartDate,EndDate,SentenceType
+501,405,03-02-2028,04-08-2033,imprisonment
+502,454,02-07-2028,null,lifetime imprisonment
+503,474,26-07-2028,13-12-2030,imprisonment
+504,423,20-05-2028,null,lifetime imprisonment
+505,425,05-01-2028,null,lifetime imprisonment
+506,414,08-01-2028,20-04-2029,death sentence
+507,426,14-07-2028,16-01-2037,death sentence
+508,484,27-03-2028,null,lifetime imprisonment
+509,469,08-04-2028,09-01-2031,death sentence
+510,424,08-02-2028,16-02-2029,imprisonment
+511,412,21-06-2028,null,lifetime imprisonment
+512,489,26-01-2028,22-07-2031,imprisonment
+513,480,12-05-2028,02-11-2029,imprisonment
+514,467,22-10-2028,null,lifetime imprisonment
+515,497,16-10-2028,28-03-2037,fine
+516,446,14-04-2028,07-05-2036,imprisonment
+517,436,31-05-2028,11-04-2031,death sentence
+518,470,28-10-2028,null,lifetime imprisonment
+520,420,25-01-2028,17-08-2038,fine
+520,477,18-06-2028,07-03-2033,death sentence
+521,433,15-10-2028,02-10-2033,imprisonment
+522,409,22-01-2028,28-06-2029,imprisonment
+523,458,07-01-2028,null,lifetime imprisonment
+524,450,16-03-2028,02-02-2038,fine
+525,485,28-09-2028,22-10-2040,death sentence
+526,422,10-09-2028,15-11-2034,death sentence
+527,453,21-01-2028,16-05-2031,death sentence
+528,488,26-11-2028,07-12-2032,death sentence
+529,413,04-12-2028,null,lifetime imprisonment
+530,420,03-06-2028,22-02-2030,fine
+531,452,29-05-2028,null,lifetime imprisonment
+532,417,20-09-2028,11-07-2031,fine
+533,481,24-01-2028,30-10-2033,imprisonment
+534,435,20-10-2028,null,lifetime imprisonment
+535,478,22-10-2028,02-12-2040,fine
+536,461,05-05-2028,null,lifetime imprisonment
+537,401,08-08-2028,03-02-2040,death sentence
+538,456,15-08-2028,09-02-2034,imprisonment
+539,429,24-12-2028,06-01-2033,fine
+540,491,09-07-2028,01-05-2035,fine
+541,457,08-12-2028,02-06-2030,imprisonment
+542,449,21-11-2028,07-03-2029,death sentence
+543,415,21-06-2028,null,lifetime imprisonment
+544,468,10-04-2028,13-11-2035,fine
+545,437,05-12-2028,null,lifetime imprisonment
+546,439,22-12-2028,06-09-2037,death sentence
+547,455,28-10-2028,24-07-2029,imprisonment
+548,404,02-05-2028,null,lifetime imprisonment
+549,473,14-06-2028,13-11-2029,imprisonment
+550,443,22-08-2028,null,lifetime imprisonment
+551,482,12-03-2028,null,lifetime imprisonment
+552,438,04-09-2028,18-08-2037,imprisonment
+553,494,07-05-2028,null,lifetime imprisonment
+554,463,07-04-2028,18-10-2031,fine
+555,464,21-12-2028,04-06-2033,death sentence
+556,441,25-03-2028,15-06-2040,death sentence
+557,451,18-09-2028,27-03-2036,imprisonment
+558,402,14-11-2028,null,lifetime imprisonment
+559,448,25-08-2028,01-07-2032,fine
+560,487,30-04-2028,17-01-2037,death sentence
+561,475,21-05-2028,08-05-2038,imprisonment
+562,434,14-11-2028,06-03-2031,imprisonment
+563,407,24-02-2028,null,lifetime imprisonment
+564,444,29-11-2028,24-03-2036,death sentence
+565,403,03-12-2028,02-06-2035,imprisonment
+566,492,13-04-2028,11-02-2040,death sentence
+567,479,23-11-2028,02-06-2040,imprisonment
+568,421,08-05-2028,24-09-2033,death sentence
+569,460,20-09-2028,null,lifetime imprisonment
+570,490,30-07-2028,14-06-2033,death sentence
+571,430,01-10-2028,null,lifetime imprisonment
+572,418,30-01-2028,null,lifetime imprisonment
+573,406,13-06-2028,14-04-2032,fine
+574,483,05-06-2028,11-04-2034,fine
+575,411,09-08-2028,25-11-2031,imprisonment
+576,500,15-06-2028,11-11-2034,fine
+577,447,24-10-2028,12-03-2029,imprisonment
+578,495,23-12-2028,null,lifetime imprisonment
+579,428,22-01-2028,18-12-2031,fine
+580,440,26-12-2028,null,lifetime imprisonment
+581,465,29-03-2028,null,lifetime imprisonment
+582,498,15-03-2028,25-09-2034,imprisonment
+583,416,14-10-2028,21-01-2036,imprisonment
+584,427,22-09-2028,03-09-2030,fine
+585,499,01-03-2028,17-12-2040,death sentence
+586,476,20-09-2028,28-11-2034,death sentence
+587,462,17-12-2028,20-06-2033,imprisonment
+588,471,01-02-2028,22-02-2039,death sentence
+589,496,25-06-2028,09-06-2039,death sentence
+590,431,25-08-2028,null,lifetime imprisonment
+591,466,21-08-2028,06-08-2036,death sentence
+592,459,14-06-2028,null,lifetime imprisonment
+593,493,09-02-2028,null,lifetime imprisonment
+594,432,13-01-2028,26-09-2038,imprisonment
+595,472,04-07-2028,21-05-2030,imprisonment
+596,486,20-07-2028,29-09-2034,imprisonment
+597,408,13-01-2028,28-02-2034,fine
+598,445,18-07-2028,17-11-2037,fine
+599,410,21-07-2028,29-12-2040,imprisonment
+600,442,13-01-2028,null,lifetime imprisonment

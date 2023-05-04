@@ -1,0 +1,101 @@
+CaseID,CourtName,JudgeName,CaseType,HearingDate,case_status
+401, Delhi High Court                                                   ,Malhotra,Kidnapping,2024-04-02,SOLVED
+402, Rajasthan High Court                                               ,Sharma,Robbery,2025-05-20,SOLVED
+403,Bombay High Court                                                  ,Deshmukh,Half Murder,2027-11-16,SOLVED
+404, Telangana High Court                                               ,Patil,Smuggling,2027-09-21,SOLVED
+405, Uttarakhand High Court                                             ,Malhotra,Half Murder,2025-04-22,SOLVED
+406, Calcutta High Court                                                ,Deshmukh,Half Murder,2025-11-25,SOLVED
+407, Punjab and Haryana High Court                                      ,Agrawal,Smuggling,2025-03-14,SOLVED
+408, Jammu and Kashmir High Court                                       ,Deshpande,Hijacking,2024-02-22,SOLVED
+409, Himachal Pradesh High Court                                        ,Gill,Murder,2025-06-09,UNSOLVED
+410, Orissa High Court                                                  ,Patil,Robbery,2026-10-25,UNSOLVED
+411, Karnataka High Court                                               ,Sharma,Murder,2026-02-13,SOLVED
+412, Calcutta High Court                                                ,Gill,Murder,2026-03-25,UNSOLVED
+413, Kerala High Court                                                  ,Gill,White collar,2026-07-28,UNSOLVED
+414,Allahabad High Court                                               ,Deshpande,Murder,2023-08-18,SOLVED
+415, Karnataka High Court                                               ,Patil,Rape,2027-04-14,SOLVED
+416, Chhattisgarh High Court                                            ,Patil,Kidnapping,2025-10-14,SOLVED
+417, Orissa High Court                                                  ,Kohli,White collar,2025-11-01,SOLVED
+418, Calcutta High Court                                                ,Malhotra,Half Murder,2026-09-21,SOLVED
+419, Orissa High Court                                                  ,Khan ,Kidnapping,2026-10-31,SOLVED
+420, Himachal Pradesh High Court                                        ,Kohli,Kidnapping,2024-08-27,UNSOLVED
+421, High Court for the Union Territory of Jammu and Kashmir and Ladakh ,Singh,Kidnapping,2027-10-25,SOLVED
+422, High Court for the Union Territory of Jammu and Kashmir and Ladakh ,Deshmukh,Half Murder,2023-05-06,SOLVED
+423, Jharkhand High Court                                               ,Malhotra,Robbery,2027-01-21,SOLVED
+424, Uttarakhand High Court                                             ,Gill,Terrorism,2024-11-24,SOLVED
+425, Karnataka High Court                                               ,Kohli,Hijacking,2024-01-20,SOLVED
+426,Bombay High Court                                                  ,Patil,Rape,2026-03-14,SOLVED
+427, Sikkim High Court                                                  ,Deshpande,Rape,2026-05-28,SOLVED
+428, Meghalaya High Court                                               ,Patil,Robbery,2025-12-19,SOLVED
+429, Uttarakhand High Court                                             ,Patel,Robbery,2027-06-24,SOLVED
+430, Delhi High Court                                                   ,Deshpande,Robbery,2026-06-03,UNSOLVED
+431,Allahabad High Court                                               ,Deshmukh,Rape,2026-03-08,SOLVED
+432, Himachal Pradesh High Court                                        ,Patil,Robbery,2025-03-03,SOLVED
+433, Meghalaya High Court                                               ,Agrawal,Rape,2027-08-14,UNSOLVED
+434, Patna High Court                                                   ,Kohli,Terrorism,2023-08-16,SOLVED
+435, Delhi High Court                                                   ,Kohli,Murder,2025-12-20,SOLVED
+436, Sikkim High Court                                                  ,Deshpande,Smuggling,2025-07-05,UNSOLVED
+437, Telangana High Court                                               ,Sharma,Smuggling,2026-04-10,SOLVED
+438, Karnataka High Court                                               ,Agrawal,Robbery,2023-06-21,SOLVED
+439, Rajasthan High Court                                               ,Sharma,Rape,2024-04-09,SOLVED
+440, Madhya Pradesh High Court                                          ,Deshmukh,Smuggling,2024-02-17,SOLVED
+441, Gujarat High Court                                                 ,Singh,Hijacking,2026-04-26,SOLVED
+442, Patna High Court                                                   ,Gill,Smuggling,2024-07-17,SOLVED
+443, Jharkhand High Court                                               ,Kohli,Murder,2026-08-14,SOLVED
+444, Jammu and Kashmir High Court                                       ,Sharma,Smuggling,2023-09-26,SOLVED
+445,Allahabad High Court                                               ,Deshmukh,Rape,2027-06-09,SOLVED
+446, Delhi High Court                                                   ,Kohli,White collar,2023-12-13,SOLVED
+447, Calcutta High Court                                                ,Malpani,Murder,2023-07-24,SOLVED
+448, Chhattisgarh High Court                                            ,Patil,Robbery,2027-10-22,SOLVED
+449, Madras High Court                                                  ,Agrawal,Murder,2024-12-13,SOLVED
+450, Punjab and Haryana High Court                                      ,Deshpande,Murder,2026-06-04,UNSOLVED
+451, Andhra Pradesh High Court                                          ,Sharma,Robbery,2024-09-04,SOLVED
+452, Tripura High Court                                                 ,Patel,Murder,2025-01-04,SOLVED
+453, Madras High Court                                                  ,Patil,Robbery,2027-05-15,SOLVED
+454,Bombay High Court                                                  ,Sharma,Hijacking,2024-06-06,SOLVED
+455, Gujarat High Court                                                 ,Singh,Robbery,2027-11-05,SOLVED
+456, Supreme Court                                                      ,Kohli,White collar,2024-03-28,SOLVED
+457, Patna High Court                                                   ,Deshpande,White collar,2023-12-09,UNSOLVED
+458, Meghalaya High Court                                               ,Sharma,Kidnapping,2023-09-01,SOLVED
+459, Kerala High Court                                                  ,Deshmukh,Hijacking,2023-07-31,UNSOLVED
+460, Jharkhand High Court                                               ,Gill,Murder,2026-08-07,UNSOLVED
+461, Jharkhand High Court                                               ,Khan ,Robbery,2027-12-22,UNSOLVED
+462, Karnataka High Court                                               ,Patil,Murder,2024-02-14,SOLVED
+463, Telangana High Court                                               ,Patil,Murder,2023-09-28,SOLVED
+464, Calcutta High Court                                                ,Gill,White collar,2025-08-26,SOLVED
+465,Allahabad High Court                                               ,Patel,Terrorism,2025-05-02,UNSOLVED
+466, Orissa High Court                                                  ,Malhotra,White collar,2026-03-04,UNSOLVED
+467, Patna High Court                                                   ,Deshpande,Murder,2027-11-11,SOLVED
+468, Kerala High Court                                                  ,Khan ,Half Murder,2025-06-26,SOLVED
+469, Madhya Pradesh High Court                                          ,Deshmukh,Half Murder,2024-04-07,SOLVED
+470, Karnataka High Court                                               ,Khan ,Murder,2024-06-10,SOLVED
+471, Telangana High Court                                               ,Khan ,Robbery,2027-10-24,SOLVED
+472, Kerala High Court                                                  ,Gill,Robbery,2027-04-21,SOLVED
+473, Punjab and Haryana High Court                                      ,Malhotra,Smuggling,2026-07-12,UNSOLVED
+474, Andhra Pradesh High Court                                          ,Deshpande,Half Murder,2027-01-08,SOLVED
+475, Himachal Pradesh High Court                                        ,Deshmukh,Robbery,2027-08-20,UNSOLVED
+476, Tripura High Court                                                 ,Gill,Murder,2024-08-31,SOLVED
+477, Andhra Pradesh High Court                                          ,Khan ,Robbery,2026-11-19,SOLVED
+478, Delhi High Court                                                   ,Deshpande,Kidnapping,2027-08-29,SOLVED
+479, Madhya Pradesh High Court                                          ,Patel,Hijacking,2026-01-16,SOLVED
+480, Himachal Pradesh High Court                                        ,Khan ,Rape,2024-12-11,SOLVED
+481, Gujarat High Court                                                 ,Gill,Rape,2027-01-24,UNSOLVED
+482, Andhra Pradesh High Court                                          ,Malpani,White collar,2026-02-27,SOLVED
+483, Punjab and Haryana High Court                                      ,Malhotra,Terrorism,2024-05-04,SOLVED
+484, Tripura High Court                                                 ,Sharma,Rape,2024-09-20,SOLVED
+485, Madras High Court                                                  ,Malpani,Smuggling,2026-10-06,SOLVED
+486, Telangana High Court                                               ,Malhotra,Robbery,2027-07-18,SOLVED
+487, Gujarat High Court                                                 ,Malhotra,White collar,2025-11-23,SOLVED
+488, Himachal Pradesh High Court                                        ,Deshpande,White collar,2026-03-07,SOLVED
+489, Orissa High Court                                                  ,Kohli,Murder,2026-02-24,SOLVED
+490, Patna High Court                                                   ,Sharma,White collar,2027-03-22,SOLVED
+491,Allahabad High Court                                               ,Sharma,Hijacking,2024-09-30,SOLVED
+492, Jharkhand High Court                                               ,Patel,Kidnapping,2024-10-24,SOLVED
+493, Madhya Pradesh High Court                                          ,Sharma,Murder,2027-04-08,SOLVED
+494, Tripura High Court                                                 ,Khan ,Robbery,2023-08-21,SOLVED
+495, Gujarat High Court                                                 ,Patil,Robbery,2024-02-02,SOLVED
+496, Madhya Pradesh High Court                                          ,Kohli,Half Murder,2023-12-16,UNSOLVED
+497, Calcutta High Court                                                ,Singh,Half Murder,2026-05-28,SOLVED
+498, Sikkim High Court                                                  ,Patil,White collar,2027-12-24,SOLVED
+499, Delhi High Court                                                   ,Kohli,Murder,2025-05-27,SOLVED
+500, Patna High Court                                                   ,Malpani,Smuggling,2026-06-01,UNSOLVED
