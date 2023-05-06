@@ -338,7 +338,7 @@ if(isset($_POST['query_8']))
 
 if(isset($_POST['query_9']))
 {
-    $sql=" SELECT CriminalID,CrimeID,FirstName,LastName, YEAR(CURDATE()) - YEAR(criminal_dob) AS age FROM criminal ORDER BY age ";
+    $sql=" SELECT CriminalID,CrimeID,FirstName,LastName, YEAR(CURDATE()) - YEAR(criminal_dob) AS age FROM criminal3 ORDER BY age ";
     
     $result= mysqli_query($con,$sql);
     
@@ -410,7 +410,7 @@ if(isset($_POST['query_10']))
 
 if(isset($_POST['query_11']))
 {
-    $sql=" SELECT YEAR(CURDATE()) - YEAR(criminal_dob) AS age, COUNT(*) AS criminal_count FROM criminal GROUP BY age ORDER BY age ";
+    $sql=" SELECT YEAR(CURDATE()) - YEAR(criminal_dob) AS age, COUNT(*) AS criminal_count FROM criminal3 GROUP BY age ORDER BY age ";
     
     $result= mysqli_query($con,$sql);
     
@@ -514,7 +514,9 @@ if(isset($_POST['query_13']))
     // Display the results
     echo "<table>";
     echo "<tr><th>VictimID</th><th>CrimeID</th><th>FirstName</th><th>LastName</th><th>age</th></tr>";
+    echo "Yooo";
     while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
         echo "<tr><td>".$row['VictimID']."</td><td>".$row['CrimeID']."</td><td>".$row['firstname']."</td><td>".$row['lastname']."</td><td>".$row['age']."</td></tr>";
     }
     echo "</table>";
@@ -525,6 +527,61 @@ if(isset($_POST['query_13']))
 
 
 </div>
+
+<div class="input field">
+    <li><h3>View number of Criminal of a an entered age</h3></li>
+    <label>Enter Criminal age</label>
+    <input type="number" placeholder="Enter Criminal age" name="criminal_age_userinput" >
+    <input type="submit" name="crimnal_age_btn" value="Enter">
+    <?php
+global $criminal_age;
+if(isset($_POST['criminal_age_btn']))
+{
+$criminal_age=$_POST['criminal_age_userinput'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_14" value="View">
+
+    <?php 
+echo $criminal_age;
+if(isset($_POST['query_14']))
+{
+    $sql=" SELECT CriminalID,CrimeID,FirstName,LastName,YEAR(CURDATE()) - YEAR(Criminal_DOB) AS age FROM criminal3 where Criminal_DOB = '.$criminal_age.'";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>CriminalID</th><th>CrimeID</th><th>FirstName</th><th>LastName</th><th>age</th></tr>";
+    echo "Yooo";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['CriminalID']."</td><td>".$row['CrimeID']."</td><td>".$row['FirstName']."</td><td>".$row['LastName']."</td><td>".$row['age']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
+</div>
+
 
 
 
