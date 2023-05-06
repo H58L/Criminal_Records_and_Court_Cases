@@ -403,6 +403,128 @@ if(isset($_POST['query_10']))
 ?>
 
 </div>
+<div class="input field">
+    <li><h3>View number of criminals as per age</h3></li>
+    <input type="submit" name="query_11" Value="View">
+    <?php 
+
+if(isset($_POST['query_11']))
+{
+    $sql=" SELECT YEAR(CURDATE()) - YEAR(criminal_dob) AS age, COUNT(*) AS criminal_count FROM criminal GROUP BY age ORDER BY age ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>Number of Criminals</th><th>Age</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['criminal_count']."</td><td>".$row['age']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
+
+<div class="input fields">
+<li><h3>View number of Victims as per age</h3></li>
+<input type="submit" name="query_12" value="View">
+<?php 
+
+if(isset($_POST['query_12']))
+{
+    $sql=" SELECT YEAR(CURDATE()) - YEAR(Victim_DOB) AS age, COUNT(*) AS victim_count FROM victimm GROUP BY age ORDER BY age ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>Number of Victims</th><th>Age</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['victim_count']."</td><td>".$row['age']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
+<div class="input field">
+    <li><h3>View number of Victims of a an entered age</h3></li>
+    <label>Enter Victim age</label>
+    <input type="number" placeholder="Enter Victim age" name="victim_age_userinput" >
+    <input type="submit" name="victim_age_btn" value="Enter">
+    <?php
+global $vic_age;
+if(isset($_POST['victim_age_btn']))
+{
+$vic_age=$_POST['victim_age_userinput'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_13" value="View">
+
+    <?php 
+echo $vic_age;
+if(isset($_POST['query_13']))
+{
+    $sql=" SELECT VictimID,CrimeID,firstname,lastname,YEAR(CURDATE()) - YEAR(Victim_DOB) AS age FROM victimm where Victim_DOB = '.$vic_age.'";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>VictimID</th><th>CrimeID</th><th>FirstName</th><th>LastName</th><th>age</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['VictimID']."</td><td>".$row['CrimeID']."</td><td>".$row['firstname']."</td><td>".$row['lastname']."</td><td>".$row['age']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
+</div>
 
 
 
