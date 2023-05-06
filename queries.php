@@ -495,7 +495,7 @@ $vic_age=$_POST['victim_age_userinput'];
 echo $vic_age;
 if(isset($_POST['query_13']))
 {
-    $sql=" SELECT VictimID,CrimeID,firstname,lastname,YEAR(CURDATE()) - YEAR(Victim_DOB) AS age FROM victimm where Victim_DOB = '.$vic_age.'";
+    $sql=" SELECT VictimID,CrimeID,firstname,lastname,YEAR(CURDATE()) - YEAR(Victim_DOB) AS age FROM victimm where Victim_DOB = '".$vic_age."'";
     
     $result= mysqli_query($con,$sql);
     
@@ -578,6 +578,119 @@ if(isset($_POST['query_14']))
 }
 
 ?>
+
+
+</div>
+
+<div class="input field">
+<li><h3>Count number of victims as per gender</h3></li>
+<label>Enter gender</label>
+<input type="text" name="victim_gender" Value="Enter" placeholder="ENter gender">
+<input type="submit" name="victim_gender_btn" Value="Enter">
+<?php
+global $victim_gender;
+if(isset($_POST['victim_gender_btn']))
+{
+$victim_gender=$_POST['victim_gender'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_15" value="View">
+
+    <?php 
+echo $victim_gender;
+if(isset($_POST['query_15']))
+{
+    $sql="SELECT VictimID,CrimeID,FirstName,LastName,Gender FROM victimm WHERE Gender= '.$victim_gender.'  ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>VictimID</th><th>CrimeID</th><th>FirstName</th><th>LastName</th><th>Gender</th></tr>";
+    echo "Yooo";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['VictimID']."</td><td>".$row['CrimeID']."</td><td>".$row['FirstName']."</td><td>".$row['LastName']."</td><td>".$row['Gender']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
+
+
+</div>
+
+
+<div class="input field">
+<li><h3>Count number of Criminal as per gender</h3></li>
+<label>Enter gender</label>
+<input type="text" name="criminal_gender" Value="Enter" placeholder="ENter gender">
+<input type="submit" name="criminal_gender_btn" Value="Enter">
+<?php
+global $criminal_gender;
+if(isset($_POST['criminal_gender_btn']))
+{
+$criminal_gender=$_POST['criminal_gender'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_16" value="View">
+
+    <?php 
+echo $criminal_gender;
+if(isset($_POST['query_16']))
+{
+    $sql="SELECT CriminalID,CrimeID,FirstName,LastName,Gender FROM criminal3 WHERE Gender= '.$criminal_gender.'  ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>CriminalID</th><th>CrimeID</th><th>FirstName</th><th>LastName</th><th>Gender</th></tr>";
+    echo "Yooo";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['CriminalID']."</td><td>".$row['CrimeID']."</td><td>".$row['FirstName']."</td><td>".$row['LastName']."</td><td>".$row['Gender']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
 
 
 </div>
