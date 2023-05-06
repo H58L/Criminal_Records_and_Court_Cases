@@ -137,4 +137,8 @@ if(isset($_POST['query_3']))
 
 </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 94b83e2130229c1156276c058543db580e30f7cf

@@ -1,3 +1,6 @@
+<!--
+    Create connection with frontend -->
+
 <?php
 $host="localhost";
 $user="root";
@@ -17,3 +20,5 @@ else
 
 
 ?>
+?>
+<!-- Inserting Data -->
