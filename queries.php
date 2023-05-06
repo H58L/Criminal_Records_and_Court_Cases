@@ -15,7 +15,56 @@
 <div class="container">
 <form action="" method="POST">
     <ol>
+        <div class="input field">
+<h3><li>View Cases and their details</h3></li>
+<input type="submit" name="query_4" value="View">
+
+
+
+                    
+
+        
+        <?php 
+if(isset($_POST['query_4']))
+{
+    $sql=" SELECT * from cases;
+    ";
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+
+    echo "<table>";
+    echo "<tr><th>CaseID</th><th>CourtName</th><th>JudgeName</th><th>CaseType</th><th>HearingDate</th><th>Case_Status</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['CaseID']."</td><td>".$row['CourtName']."</td><td>".$row['JudgeName']."</td><td>".$row['CaseType']."</td><td>".$row['HearingDate']."</td><td>".$row['Case_Status']."</td></tr>";
+    }
+    echo "</table>";
+    
+    
+    
+    
+    
+
+    
+}
+
+?>
+</div>
+
+
+
+
+
 <div class="input field">
+
+
+
+
 <h3><li>View number of crimes per state</li></h3>
 <input type="submit" name="query_1" value="View">
 
@@ -128,6 +177,52 @@ if(isset($_POST['query_3']))
 
 
 </div>
+<div class="input field">
+<li><h3>View number of crimes city wise</h3></li>
+<input type="submit" name="query_5" value="View">
+
+<?php 
+if(isset($_POST['query_5']))
+{
+    $sql="SELECT City, COUNT(*) as num_crimes
+    FROM crime
+    GROUP BY City
+    ORDER BY num_crimes  DESC
+    ";
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>City</th><th>Number of Crimes</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['City']."</td><td>".$row['num_crimes']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
+
+
+</div>
+<div class="input field">
+
+<li><h3>View City with maximum number of crimes</h3></li>
+
+</div>
 
 
 
@@ -137,8 +232,6 @@ if(isset($_POST['query_3']))
 
 </div>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 94b83e2130229c1156276c058543db580e30f7cf
+
+
