@@ -221,6 +221,76 @@ if(isset($_POST['query_5']))
 <div class="input field">
 
 <li><h3>View City with maximum number of crimes</h3></li>
+<input type="submit" name="query_6" Value="View">
+<?php 
+if(isset($_POST['query_6']))
+{
+    $sql="SELECT City, COUNT(*) as num_crimes
+    FROM crime
+    GROUP BY City
+    ORDER BY num_crimes  DESC LIMIT 1
+    ";
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>City</th><th>Number of Crimes</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['City']."</td><td>".$row['num_crimes']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
+</div>
+<div class ="input field">
+<li><h3>View details of solved Cases</h3>
+<input type="submit" name="query_7" Value="View">
+
+<?php 
+$stat="SOLVED";
+if(isset($_POST['query_7']))
+{
+    $sql=" SELECT * FROM cases WHERE Case_Status = 'SOLVED' ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>CaseID</th><th>CourtName</th><th>JudgeName</th><th>CaseType</th><th>HearingDate</th><th>CaseStatus</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['CaseID']."</td><td>".$row['CourtName']."</td><td>".$row['JudgeName']."</td><td>".$row['CaseType']."</td><td>".$row['HearingDate']."</td><td>".$row['Case_Status']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
 
 </div>
 
