@@ -948,7 +948,215 @@ if(isset($_POST['query_22']))
 }
 
 ?>
+</div>
 
+<div class="input field">
+<li><h3>View Criminals by user input state</h3></li>
+<label>Enter State</label>
+<input type="text" name="criminal_state" Value="Enter" placeholder="ENter State">
+<input type="submit" name="criminal_state_btn" Value="Enter">
+<?php
+global $criminal_state;
+if(isset($_POST['criminal_state_btn']))
+{
+$victim_state=$_POST['criminal_state'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_22" value="View">
+
+    <?php 
+echo $criminal_state;
+if(isset($_POST['query_22']))
+{
+    $sql="SELECT CriminalID,CrimeID,FirstName,LastName,Gender FROM criminal3 WHERE States= '.$criminal_state.'  ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>CriminalID</th><th>CrimeID</th><th>FirstName</th><th>LastName</th><th>States</th></tr>";
+    echo "Yooo";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['CriminalID']."</td><td>".$row['CrimeID']."</td><td>".$row['FirstName']."</td><td>".$row['LastName']."</td><td>".$row['States']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
+
+
+<div class="input field">
+<li><h3>View number Crimes of a particular state</h3></li>
+<label>Enter State</label>
+<input type="text" name="crime_state" Value="Enter" placeholder="ENter State">
+<input type="submit" name="crime_state_btn" Value="Enter">
+<?php
+global $crime_state;
+if(isset($_POST['crime_state_btn']))
+{
+$crime_state=$_POST['crime_state'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_23" value="View">
+
+    <?php 
+echo $crime_state;
+if(isset($_POST['query_23']))
+{
+    $sql=" SELECT
+    States,
+    COUNT(*) as num_crimes
+  FROM
+    crime
+  GROUP BY
+    States
+  HAVING
+    States = '.$crime_state.' "; 
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>State</th><th>num_crimes</th></tr>";
+    echo "Yooo";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['State']."</td><td>".$row['num_crimes']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+</div>
+
+
+<div class="input field">
+<li><h3>View number Crimes of a particular year</h3></li>
+<label>Enter year</label>
+<input type="text" name="crime_year" placeholder="ENter year">
+<input type="submit" name="crime_year_btn" Value="Enter">
+<?php
+global $crime_year;
+if(isset($_POST['crime_year_btn']))
+{
+$crime_year=$_POST['crime_year'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_24" value="View">
+
+    <?php 
+echo $crime_year;
+if(isset($_POST['query_24']))
+{
+    $sql=" SELECT YEAR(crime_date) AS years, COUNT(*) AS num_crimes FROM crime GROUP BY years HAVING years= '.$crime_year.' "; 
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>years</th><th>num_crimes</th></tr>";
+    echo "Yooo";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['years']."</td><td>".$row['num_crimes']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+</div>
+
+<div class="input field">
+
+<li><h3>View number of cases as per case type</h3></li>
+<input type="submit" Value="Submit" name="query_25">
+
+<?php 
+
+if(isset($_POST['query_25']))
+{
+    $sql=" SELECT CaseType,COUNT(*) as Count FROM  cases GROUP BY CaseType "; 
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>CaseType</th><th>Count</th></tr>";
+   
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['CaseType']."</td><td>".$row['Count']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
 
 
 
