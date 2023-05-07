@@ -1336,7 +1336,89 @@ if(isset($_POST['query_29']))
 
 </div>
 
+<div class="input field">
+<li><h3>View Victim and associated Criminal and Case Type</h3></li>
 
+<input type="submit" name="query_30" Value="Submit">
+
+<?php 
+
+if(isset($_POST['query_30']))
+{
+    $sql=" SELECT victimm.CrimeID, victimm.FirstName AS victim_FirstName, victimm.LastName as victim_LastName, criminal3.FirstName AS criminal_FirstName, criminal3.LastName as criminal_LastName, cases.CaseType AS case_type FROM victimm INNER JOIN criminal3 ON victimm.CrimeID = criminal3.CrimeID INNER JOIN crime ON criminal3.CrimeID = crime.CrimeID INNER JOIN cases ON crime.CaseID = cases.CaseID";
+     
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>Victim_FirstName</th><th>Victim_LastName</th><th>criminal_FirstName</th><th>criminal_LastName</th><th>Case Type</th></tr>";
+   
+    while ($row = mysqli_fetch_assoc($result)) {
+        
+        echo "<tr><td>".$row['victim_FirstName']."</td><td>".$row['victim_LastName']."</td><td>".$row['criminal_FirstName']."</td><td>".$row['criminal_LastName']."</td><td>".$row['case_type']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
+
+<div class="input field">
+<li><h3>View criminal and his punsihment</h3></li>
+
+<input type="submit" name="query_31" Value="Submit">
+
+<?php 
+
+if(isset($_POST['query_31']))
+{
+    $sql=" SELECT `criminal3`.`FirstName` AS criminal_FirstName, `criminal3`.`LastName` AS criminal_LastName, `cases`.`CaseType` AS case_type ,`sentence`.`SentenceType` AS sentence_type FROM `criminal3` INNER JOIN `crime` ON `criminal3`.`CrimeID` = `crime`.`CrimeID` INNER JOIN `cases` ON `crime`.`CaseID` = `cases`.`CaseID` INNER JOIN `sentence`ON `sentence`.`CaseID`=`cases`.`CaseID`";
+     
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>criminal_FirstName</th><th>criminal_LastName</th><th>case_type</th><th>sentence_type</th></tr>";
+   
+    while ($row = mysqli_fetch_assoc($result)) {
+        
+        echo "<tr><td>".$row['criminal_FirstName']."</td><td>".$row['criminal_LastName']."</td><td>".$row['case_type']."</td><td>".$row['sentence_type']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
 
 
 </ol>
