@@ -1158,6 +1158,46 @@ if(isset($_POST['query_25']))
 
 </div>
 
+<div>
+    <li><h3>Count number of cases as per Case status</h3></li>
+    <input type="submit" Value="Submit" name="query_26">
+
+<?php 
+
+if(isset($_POST['query_26']))
+{
+    $sql=" SELECT Case_Status,COUNT(*) as Count FROM  cases GROUP BY Case_Status"; 
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>Case Status</th><th>Count</th></tr>";
+   
+    while ($row = mysqli_fetch_assoc($result)) {
+        
+        echo "<tr><td>".$row['Case_Status']."</td><td>".$row['Count']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
+
 
 
 
