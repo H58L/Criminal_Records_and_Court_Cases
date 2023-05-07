@@ -694,8 +694,119 @@ if(isset($_POST['query_16']))
 
 
 </div>
+<div class="input fields">
+<li><h3>Counting Victims by gender</h3></li>
+<input type="submit" name="query_17" value="view">
+
+<?php 
+
+if(isset($_POST['query_17']))
+{
+    $sql=" SELECT `Gender`, COUNT(*) as Count FROM victimm GROUP BY Gender ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>Gender</th><th>COunt</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['Gender']."</td><td>".$row['Count']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
 
 
+</div>
+
+<div class="input fields">
+<li><h3>Counting Criminals by gender</h3></li>
+<input type="submit" name="query_18" value="view">
+
+<?php 
+
+if(isset($_POST['query_18']))
+{
+    $sql=" SELECT Gender, COUNT(*) as Count FROM criminal3 GROUP BY Gender ";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>Gender</th><th>COunt</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['Gender']."</td><td>".$row['Count']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
+</div>
+
+<div class="input fields">
+<li><h3>View Victims by State</h3></li>
+<input type="submit" name="query_19" value="view">
+
+<?php 
+
+if(isset($_POST['query_19']))
+{
+    $sql=" SELECT VictimID,CrimeID,FirstName,LastName,States FROM victimm ORDER by States";
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result) {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>VictimID</th><th>CrimeID</th><th>FirstName</th><th>LastName</th><th>State</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>".$row['VictimID']."</td><td>".$row['CrimeID']."</td><td>".$row['FirstName']."</td><td>".$row['LastName']."</td><td>".$row['States']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+
+</div>
 
 
 </ol>
