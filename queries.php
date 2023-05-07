@@ -1198,6 +1198,144 @@ if(isset($_POST['query_26']))
 
 </div>
 
+<div>
+    <li><h3>Count number of cases as per Courts</h3></li>
+    <input type="submit" Value="Submit" name="query_27">
+
+<?php 
+
+if(isset($_POST['query_27']))
+{
+    $sql=" SELECT CourtName,COUNT(*) as Count FROM  cases GROUP BY CourtName"; 
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>CourtName</th><th>Count</th></tr>";
+   
+    while ($row = mysqli_fetch_assoc($result)) {
+        
+        echo "<tr><td>".$row['CourtName']."</td><td>".$row['Count']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
+
+
+
+<div class="input field">
+<li><h3>View Crimes as per user input Court name</h3></li>
+<label>Enter year</label>
+<input type="text" name="court_name" placeholder="ENter COurt Name">
+<input type="submit" name="court_name_btn" Value="Enter">
+<?php
+global $court_name;
+if(isset($_POST['court_name_btn']))
+{
+$court_name=$_POST['court_name'];
+    
+   
+}
+    ?>
+    <br>
+    <input type="submit" name="query_28" value="View">
+
+    <?php 
+echo $court_name;
+if(isset($_POST['query_28']))
+{
+    $sql=" SELECT `CourtName`,COUNT( *) as Count FROM cases GROUP BY CourtName HAVING CourtName= '.$court_name.' "; 
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>Court Name</th><th>Count</th></tr>";
+    echo "Yooo";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "hiii";
+        echo "<tr><td>".$row['CourtName']."</td><td>".$row['Count']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+</div>
+
+<div class="input field">
+
+<li><h3>View details of ongoing cases</h3></li>
+<input type="submit" name="query_29" Value="Submit">
+
+<?php 
+
+if(isset($_POST['query_29']))
+{
+    $sql="SELECT * 
+    FROM cases 
+    WHERE YEAR(`HearingDate`) = YEAR(CURDATE())";
+     
+    
+    $result= mysqli_query($con,$sql);
+    
+    if (!$result)
+     {
+        echo "FAILED";
+        die("Query failed: " . mysqli_error($con));
+        exit();
+    
+    }
+    // else{
+    //     header("Location: queries.php");
+    //      exit();
+    // }
+    
+    // Display the results
+    echo "<table>";
+    echo "<tr><th>CaseID</th><th>CourtName</th><th>JudgeName</th><th>Case Type</th><th>HearingDate</th><th>case_status</th></tr>";
+   
+    while ($row = mysqli_fetch_assoc($result)) {
+        
+        echo "<tr><td>".$row['CaseID']."</td><td>".$row['CourtName']."</td><td>".$row['JudgeName']."</td><td>".$row['CaseType']."</td><td>".$row['HearingDate']."</td><td>".$row['case_status']."</td></tr>";
+    }
+    echo "</table>";
+    
+}
+
+?>
+
+</div>
+
 
 
 
