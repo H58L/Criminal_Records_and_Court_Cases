@@ -25,17 +25,19 @@ require_once "conn.php";
     <!----===== Iconscout CSS ===== -->
     <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
 </head>
-<body>
+<body bgcolor=lightgreen>
     <div class="container">
         <header>Registration</header>
 
         <form action="" method="POST">
+        <table>
+                <th><h3><b>Registrtion of Case:</b></h3></th>
+                <th><h3><b></b></h3></th>
             <div class="form first">
                 <div class="details personal">
                     <!-- <span class="title">Personal Details</span> -->
-
+                  
                     <div class="fields">
-
                         <div class="input-field">
                             <label>Case ID</label>
                             <input type="number" placeholder="Enter ID number" name="case_id" required>
@@ -435,19 +437,19 @@ if(isset($_POST['save_btn'])){
     $criminal_state=$_POST['criminal_state'];
     $criminal_pincode=$_POST['criminal_pincode'];
 
-    $case_query = "INSERT INTO cases(CaseID,CourtName,JudgeName,CaseType,HearingDate,Case_Status) 
+    $case_query = "INSERT INTO cases(CaseID,CourtName,JudgeName,CaseType,HearingDate,case_status) 
     VALUES('$case_id','$court_name','$judge_name','$case_type','$hearing_date','$status')";
 
-    $crime_query = "INSERT INTO crime(CrimeID,CriminalID,VictimID,CaseID,Crime_Date,States,City,Pincode) 
+    $crime_query = "INSERT INTO crime(CrimeID,CriminalID,VictimID,CaseID,crime_date,States,City,Pincode) 
     VALUES('$crime_id','$criminal_id','$victim_id','$case_id','$crime_date','$crime_state','$crime_city','$crime_pincode')";
 
-    $sentence_query = "INSERT INTO sentence(SentenceID,CaseID,StartDate,EndDate,SentenceType) 
+    $sentence_query = "INSERT INTO sentence1(SentenceID,CaseID,StartDate,EndDate,SentenceType) 
     VALUES('$sentence_id','$case_id','$sentence_start_date','$sentence_end_date','$sentence_type')";
 
-    $victim_query = "INSERT INTO victim(VictimID,CrimeID,firstName,lastName,PhoneNo,Gender,DOB,AadhaarNumber,States,City,Pincode) 
+    $victim_query = "INSERT INTO victimm(VictimID,CrimeID,FirstName,LastName,PhoneNo,Gender,Victim_DOB,AadhaarNo,States,City,Pincode) 
     VALUES('$victim_id','$crime_id','$victim_first_name','$victim_last_name','$victim_gender','$victim_DOB','$criminal_pno','$criminal_aadhaarno','$victim_state','$victim_city','$victim_pincode')";
 
-    $criminal_query = "INSERT INTO criminal(CriminalID,CrimeID,FirstName,LastName,Gender,DOB,PhoneNumber,AadhaarNumber,States,City,Pincode) 
+    $criminal_query = "INSERT INTO criminal3(CriminalID,CrimeID,FirstName,LastName,Gender,criminal_dob,PhoneNumber,AadharNo,States,City,Pincode) 
     VALUES('$criminal_id','$crime_id','$criminal_first_name','$criminal_last_name','$criminal_gender','$criminal_DOB','$criminal_pno','$criminal_aadhaarno','$criminal_state','$criminal_city','$criminal_pincode')";
 
    
