@@ -1,5 +1,5 @@
 <?php
-require_once "conn.php";
+require_once "connection.php";
 ?>
 
 <!-- <body>
@@ -25,13 +25,85 @@ require_once "conn.php";
     <!----===== Iconscout CSS ===== -->
     <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
 </head>
-<body bgcolor=lightgreen>
-    <div class="container">
-        <header>Registration</header>
 
+<style>
+    body{
+        background: linear-gradient(to right,#7d2ae8, #9198e5);
+    }
+
+    li{
+        font-size: 20px;
+    }
+
+    input[type=submit] {
+    background-color: whitesmoke;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    input[type="text"] {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+input[type="number"] {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 20px;
+
+}
+
+input[type="date"]{
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+select{
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+label{
+    font-size: 20px;
+}
+
+h3{
+    font-size: 30px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h3>Registration of Case</h3>
         <form action="" method="POST">
         <table>
-                <th><h3><b>Registrtion of Case:</b></h3></th>
+                <th><h3><b></b></h3></th>
                 <th><h3><b></b></h3></th>
             <div class="form first">
                 <div class="details personal">
@@ -139,7 +211,7 @@ require_once "conn.php";
                         
                         <div class="input-field">
                             <label>City</label>
-                            <input type="text" name="crime_city" > 
+                            <input type="text" placeholder="Enter City" name="crime_city" > 
                         </div>
 
                         <div class="input-field">
@@ -180,7 +252,7 @@ require_once "conn.php";
 
                         <div class="input-field">
                             <label>Pincode</label>
-                            <input type="number" name="crime_pincode" >
+                            <input type="number" placeholder="Enter Pincode" name="crime_pincode" >
                         </div>
                     </div>
 <br>
@@ -253,7 +325,7 @@ require_once "conn.php";
                         
                         <div class="input-field">
                             <label>City</label>
-                            <input type="text" name="victim_city" > 
+                            <input type="text" placeholder="Enter City" name="victim_city" > 
                         </div>
 
                         <div class="input-field">
@@ -294,7 +366,7 @@ require_once "conn.php";
 
                         <div class="input-field">
                             <label>Pincode</label>
-                            <input type="number" name="victim_pincode" >
+                            <input type="number" placeholder="Enter Pincode" name="victim_pincode" >
                         </div>
                     </div>
 <br>
@@ -345,7 +417,7 @@ require_once "conn.php";
                         
                         <div class="input-field">
                             <label>City</label>
-                            <input type="text" name="criminal_city"> 
+                            <input type="text" placeholder="Enter City" name="criminal_city"> 
                         </div>
 
                         <div class="input-field">
@@ -386,7 +458,7 @@ require_once "conn.php";
 
                         <div class="input-field">
                             <label>Pincode</label>
-                            <input type="number" name="criminal_pincode" >
+                            <input type="number" placeholder="Enter Pincode" name="criminal_pincode" >
                         </div>
                     </div>
                 </div>
