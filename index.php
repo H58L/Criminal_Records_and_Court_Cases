@@ -16,14 +16,14 @@
       <div class="front">
         <img src="images/supremecourt.avif" alt="">
         <div class="text">
-          <span class="text-1">Every new friend is a <br> new adventure</span>
-          <span class="text-2">Let's get connected</span>
+          <span class="text-1">"Guardian of Justice, <br>  Defender of the Constitution."</span>
+          <span class="text-2">- Supreme Court</span>
         </div>
       </div>
       <div class="back">
         <!-- <img class="backImg" src="images/court.jpeg" alt=""> -->
         <div class="text">
-          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-1">"Guardian of Justice, <br>  Defender of the Constitution."</span>
           <span class="text-2">Let's get started</span>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="queries.php">
+          <form action="options.php">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
